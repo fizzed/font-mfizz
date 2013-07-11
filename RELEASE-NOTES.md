@@ -9,6 +9,7 @@ Font Mfizz Release Notes
  - added icon-ruby-on-rails, icon-ruby-on-rails-alt: Ruby on Rails Framework
  - added icon-clojure: Clojure Programming Language 
  - added icon-heroku: Heroku Brand
+ - added icon-dreamhost: Dream Host Brand
 
 ## 1.1 - 2013-07-09
  - Added 20 new icons
