@@ -10,6 +10,8 @@ Font Mfizz Release Notes
  - added icon-clojure: Clojure Programming Language 
  - added icon-heroku: Heroku Brand
  - added icon-dreamhost: Dream Host Brand
+ - added icon-centos: CentOS Linux Operating System
+ - added icon-fedora: Fedora Linux Operating System
 
 ## 1.1 - 2013-07-09
  - Added 20 new icons
