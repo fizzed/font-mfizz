@@ -1,9 +1,24 @@
-/* 
- * Font Custom: bare CSS
+/*
+ * Font Mfizz v1.2
+ * Copyright 2013 Mfizz Inc, Joe Lauer
+ * MIT License
+ *
+ * Project: http://mfizz.com/oss/font-mfizz
+ *
+ * The font designed for technology and software geeks representing programming
+ * languages, operating systems, software engineering, and technology. 
+ *
+ * Mfizz Inc
+ * Web: http://mfizz.com/
+ * Twitter: http://twitter.com/mfizz_inc
+ * 
+ * Joe Lauer
+ * Web: http://lauer.bz/
+ * Twitter: http://twitter.com/jjlauer
  */
 
 @font-face {
-  font-family: "font-mfizz";
+  font-family: "FontMfizz";
   src: url("font-mfizz.eot");
   src: url("font-mfizz.eot?#iefix") format("embedded-opentype"),
        url("font-mfizz.woff") format("woff"),
@@ -27,11 +42,13 @@
 .icon-satellite:before,
 .icon-debian:before,
 .icon-grails:before,
+.icon-c:before,
 .icon-postgres:before,
 .icon-database-alt2:before,
 .icon-raspberrypi:before,
 .icon-nginx:before,
 .icon-ruby-on-rails:before,
+.icon-redis:before,
 .icon-scala:before,
 .icon-gnome:before,
 .icon-perl:before,
@@ -60,6 +77,7 @@
 .icon-script-alt:before,
 .icon-google-alt:before,
 .icon-haskell:before,
+.icon-mariadb:before,
 .icon-phone-retro:before,
 .icon-phone-alt:before,
 .icon-csharp:before,
@@ -101,7 +119,7 @@
 .icon-google-code:before,
 .icon-kde:before,
 .icon-grails-alt:before {
-  font-family: "font-mfizz";
+  font-family: "FontMfizz";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -126,77 +144,80 @@
 .icon-satellite:before { content: "\f10b"; }
 .icon-debian:before { content: "\f10c"; }
 .icon-grails:before { content: "\f10d"; }
-.icon-postgres:before { content: "\f10e"; }
-.icon-database-alt2:before { content: "\f10f"; }
-.icon-raspberrypi:before { content: "\f110"; }
-.icon-nginx:before { content: "\f111"; }
-.icon-ruby-on-rails:before { content: "\f112"; }
-.icon-scala:before { content: "\f113"; }
-.icon-gnome:before { content: "\f114"; }
-.icon-perl:before { content: "\f115"; }
-.icon-mysql:before { content: "\f116"; }
-.icon-fedora:before { content: "\f117"; }
-.icon-ghost:before { content: "\f118"; }
-.icon-google:before { content: "\f119"; }
-.icon-netbsd:before { content: "\f11a"; }
-.icon-aws:before { content: "\f11b"; }
-.icon-bomb:before { content: "\f11c"; }
-.icon-looking:before { content: "\f11d"; }
-.icon-ruby:before { content: "\f11e"; }
-.icon-mysql-alt:before { content: "\f11f"; }
-.icon-playframework-alt:before { content: "\f120"; }
-.icon-osx:before { content: "\f121"; }
-.icon-database:before { content: "\f122"; }
-.icon-database-alt:before { content: "\f123"; }
-.icon-shell:before { content: "\f124"; }
-.icon-script:before { content: "\f125"; }
-.icon-antenna:before { content: "\f126"; }
-.icon-coffee-bean:before { content: "\f127"; }
-.icon-scala-alt:before { content: "\f128"; }
-.icon-platter:before { content: "\f129"; }
-.icon-java-duke:before { content: "\f12a"; }
-.icon-iphone:before { content: "\f12b"; }
-.icon-script-alt:before { content: "\f12c"; }
-.icon-google-alt:before { content: "\f12d"; }
-.icon-haskell:before { content: "\f12e"; }
-.icon-phone-retro:before { content: "\f12f"; }
-.icon-phone-alt:before { content: "\f130"; }
-.icon-csharp:before { content: "\f131"; }
-.icon-php:before { content: "\f132"; }
-.icon-postgres-alt:before { content: "\f133"; }
-.icon-html:before { content: "\f134"; }
-.icon-mfizz:before { content: "\f135"; }
-.icon-apache:before { content: "\f136"; }
-.icon-hadoop:before { content: "\f137"; }
-.icon-ruby-on-rails-alt:before { content: "\f138"; }
-.icon-mobile-phone-broadcast:before { content: "\f139"; }
-.icon-css:before { content: "\f13a"; }
-.icon-playframework:before { content: "\f13b"; }
-.icon-clojure:before { content: "\f13c"; }
-.icon-mobile-phone-alt:before { content: "\f13d"; }
-.icon-suse:before { content: "\f13e"; }
-.icon-java-bold:before { content: "\f13f"; }
-.icon-nginx-alt:before { content: "\f140"; }
-.icon-nginx-alt2:before { content: "\f141"; }
-.icon-linux-mint:before { content: "\f142"; }
-.icon-dreamhost:before { content: "\f143"; }
-.icon-blackberry:before { content: "\f144"; }
-.icon-javascript:before { content: "\f145"; }
-.icon-ubuntu:before { content: "\f146"; }
-.icon-php-alt:before { content: "\f147"; }
-.icon-centos:before { content: "\f148"; }
-.icon-nodejs:before { content: "\f149"; }
-.icon-splatter:before { content: "\f14a"; }
-.icon-3dprint:before { content: "\f14b"; }
-.icon-line-graph:before { content: "\f14c"; }
-.icon-cassandra:before { content: "\f14d"; }
-.icon-solaris:before { content: "\f14e"; }
-.icon-jetty:before { content: "\f14f"; }
-.icon-tomcat:before { content: "\f150"; }
-.icon-oracle:before { content: "\f151"; }
-.icon-oracle-alt:before { content: "\f152"; }
-.icon-mssql:before { content: "\f153"; }
-.icon-google-developers:before { content: "\f154"; }
-.icon-google-code:before { content: "\f155"; }
-.icon-kde:before { content: "\f156"; }
-.icon-grails-alt:before { content: "\f157"; }
+.icon-c:before { content: "\f10e"; }
+.icon-postgres:before { content: "\f10f"; }
+.icon-database-alt2:before { content: "\f110"; }
+.icon-raspberrypi:before { content: "\f111"; }
+.icon-nginx:before { content: "\f112"; }
+.icon-ruby-on-rails:before { content: "\f113"; }
+.icon-redis:before { content: "\f114"; }
+.icon-scala:before { content: "\f115"; }
+.icon-gnome:before { content: "\f116"; }
+.icon-perl:before { content: "\f117"; }
+.icon-mysql:before { content: "\f118"; }
+.icon-fedora:before { content: "\f119"; }
+.icon-ghost:before { content: "\f11a"; }
+.icon-google:before { content: "\f11b"; }
+.icon-netbsd:before { content: "\f11c"; }
+.icon-aws:before { content: "\f11d"; }
+.icon-bomb:before { content: "\f11e"; }
+.icon-looking:before { content: "\f11f"; }
+.icon-ruby:before { content: "\f120"; }
+.icon-mysql-alt:before { content: "\f121"; }
+.icon-playframework-alt:before { content: "\f122"; }
+.icon-osx:before { content: "\f123"; }
+.icon-database:before { content: "\f124"; }
+.icon-database-alt:before { content: "\f125"; }
+.icon-shell:before { content: "\f126"; }
+.icon-script:before { content: "\f127"; }
+.icon-antenna:before { content: "\f128"; }
+.icon-coffee-bean:before { content: "\f129"; }
+.icon-scala-alt:before { content: "\f12a"; }
+.icon-platter:before { content: "\f12b"; }
+.icon-java-duke:before { content: "\f12c"; }
+.icon-iphone:before { content: "\f12d"; }
+.icon-script-alt:before { content: "\f12e"; }
+.icon-google-alt:before { content: "\f12f"; }
+.icon-haskell:before { content: "\f130"; }
+.icon-mariadb:before { content: "\f131"; }
+.icon-phone-retro:before { content: "\f132"; }
+.icon-phone-alt:before { content: "\f133"; }
+.icon-csharp:before { content: "\f134"; }
+.icon-php:before { content: "\f135"; }
+.icon-postgres-alt:before { content: "\f136"; }
+.icon-html:before { content: "\f137"; }
+.icon-mfizz:before { content: "\f138"; }
+.icon-apache:before { content: "\f139"; }
+.icon-hadoop:before { content: "\f13a"; }
+.icon-ruby-on-rails-alt:before { content: "\f13b"; }
+.icon-mobile-phone-broadcast:before { content: "\f13c"; }
+.icon-css:before { content: "\f13d"; }
+.icon-playframework:before { content: "\f13e"; }
+.icon-clojure:before { content: "\f13f"; }
+.icon-mobile-phone-alt:before { content: "\f140"; }
+.icon-suse:before { content: "\f141"; }
+.icon-java-bold:before { content: "\f142"; }
+.icon-nginx-alt:before { content: "\f143"; }
+.icon-nginx-alt2:before { content: "\f144"; }
+.icon-linux-mint:before { content: "\f145"; }
+.icon-dreamhost:before { content: "\f146"; }
+.icon-blackberry:before { content: "\f147"; }
+.icon-javascript:before { content: "\f148"; }
+.icon-ubuntu:before { content: "\f149"; }
+.icon-php-alt:before { content: "\f14a"; }
+.icon-centos:before { content: "\f14b"; }
+.icon-nodejs:before { content: "\f14c"; }
+.icon-splatter:before { content: "\f14d"; }
+.icon-3dprint:before { content: "\f14e"; }
+.icon-line-graph:before { content: "\f14f"; }
+.icon-cassandra:before { content: "\f150"; }
+.icon-solaris:before { content: "\f151"; }
+.icon-jetty:before { content: "\f152"; }
+.icon-tomcat:before { content: "\f153"; }
+.icon-oracle:before { content: "\f154"; }
+.icon-oracle-alt:before { content: "\f155"; }
+.icon-mssql:before { content: "\f156"; }
+.icon-google-developers:before { content: "\f157"; }
+.icon-google-code:before { content: "\f158"; }
+.icon-kde:before { content: "\f159"; }
+.icon-grails-alt:before { content: "\f15a"; }
