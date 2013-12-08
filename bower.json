@@ -25,7 +25,9 @@
     "software",
     "icon",
     "icons",
-    "technology"
+    "technology",
+    "mfizz",
+    "font-mfizz"
   ],
   "license": "MIT",
   "ignore": [
