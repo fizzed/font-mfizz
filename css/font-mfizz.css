@@ -19,11 +19,11 @@
 
 @font-face {
   font-family: "FontMfizz";
-  src: url("font-mfizz.eot");
-  src: url("font-mfizz.eot?#iefix") format("embedded-opentype"),
-       url("font-mfizz.woff") format("woff"),
-       url("font-mfizz.ttf") format("truetype"),
-       url("font-mfizz.svg#font-mfizz") format("svg");
+  src: url("../fonts/font-mfizz.eot");
+  src: url("../fonts/font-mfizz.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/font-mfizz.woff") format("woff"),
+       url("../fonts/font-mfizz.ttf") format("truetype"),
+       url("../fonts/font-mfizz.svg#font-mfizz") format("svg");
   font-weight: normal;
   font-style: normal;
 }
