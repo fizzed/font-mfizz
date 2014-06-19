@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 100 100">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path fill="#F00" d="M0,8.0625v86.938h100v-86.938h-100zm33.469,15h33.062c15.716,0,28.469,12.784,28.469,28.5,0,15.717-12.753,28.438-28.469,28.438h-33.062c-15.712,0-28.469-12.721-28.469-28.438,0-15.716,12.757-28.5,28.469-28.5zm0.719,10.063c-10.175,0-18.407,8.263-18.407,18.437,0,10.175,8.232,18.407,18.407,18.407h31.624c10.18,0,18.407-8.232,18.407-18.407,0-10.174-8.227-18.437-18.407-18.437h-31.624z"/>
+</svg>

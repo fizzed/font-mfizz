@@ -1,0 +1,1 @@
+[<% @data[:glyphs].sort.each_with_index do |name, index| %><% if index != 0 %>,<% end %>"<%= name %>"<% end %>]
