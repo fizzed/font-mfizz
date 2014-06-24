@@ -60,7 +60,16 @@ scale to the artboard size.
 
 ## Building the font
 
-`./compile.sh` will compile the font into `svg/fontcustom`
+Execute this:
+
+    ./create-package.sh
+
+This will re-generate the font directory in the root of the repo.
+
+
+## Notes
+
+`./compile.sh` will compile the font into `font-mfizz`
 
 There is a `preview.html` file in there which will display how the icons render.
 
