@@ -2,13 +2,9 @@
 
 VERSION="1.4-SNAPSHOT"
 BUILD_DIR="font-mfizz"
-DIST_DIR="font"
+DIST_DIR="../font"
 
-rm -Rf $DIST_DIR
-mkdir $DIST_DIR
-
-echo "Copying custom font..."
-cp -Rv svg/* $BUILD_DIR/
+./compile.sh
 
 echo "Creating better main css file..."
 cat > $BUILD_DIR/font-mfizz.new.css <<EOF
@@ -36,22 +32,28 @@ EOF
 # grab css contents starting with @font-face
 sed -n -e '/@font-face/,$p' $BUILD_DIR/font-mfizz.css >> $BUILD_DIR/font-mfizz.new.css
 
+# Removed the timestamps from the preview
+sed -i '' 's/font-mfizz_.*\./font-mfizz\./p' font-mfizz/font-mfizz-preview.html
+
+# Remove the timestamps from the CSS
+sed -i '' 's/font-mfizz_.*\./font-mfizz\./p' font-mfizz/font-mfizz.new.css
+
+# Remove the timestamps from the font filenames
+rename 's/font-mfizz_.*\./font-mfizz\./p' font-mfizz/*.*
+
 # change font name from font-mfizz to "FontMfizz"
-sed -i 's/"font-mfizz"/"FontMfizz"/' $BUILD_DIR/font-mfizz.new.css
+sed -i '' 's/"font-mfizz"/"FontMfizz"/' $BUILD_DIR/font-mfizz.new.css
 
 # append css fixes
-./create-css-fixes.py >> $BUILD_DIR/font-mfizz.new.css
+# Couldn't get this to work.
+# ./create-css-fixes.py >> $BUILD_DIR/font-mfizz.new.css
 
 mv $BUILD_DIR/font-mfizz.new.css $BUILD_DIR/font-mfizz.css
 
 
 echo "Fixing preview html"
-mv $BUILD_DIR/fontcustom-preview.html $BUILD_DIR/preview.html
-sed -i 's/fontcustom.css/font-mfizz.css/g' $BUILD_DIR/preview.html
+mv $BUILD_DIR/font-mfizz-preview.html $BUILD_DIR/preview.html
+sed -i '' 's/fontcustom.css/font-mfizz.css/g' $BUILD_DIR/preview.html
 
-echo "copying license..."
-cp LICENSE.txt $BUILD_DIR/
-cp README.md $BUILD_DIR/
-cp RELEASE-NOTES.md $BUILD_DIR/
-
-tar cvfz $BUILD_DIR.tar.gz $BUILD_DIR
+rm -rf $DIST_DIR
+mv $BUILD_DIR $DIST_DIR
