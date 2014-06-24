@@ -4,6 +4,7 @@ VERSION="1.4-SNAPSHOT"
 BUILD_DIR="font-mfizz"
 DIST_DIR="../font"
 
+rm .fontcustom-manifest.json
 ./compile.sh
 
 echo "Creating better main css file..."
