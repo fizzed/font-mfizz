@@ -21,7 +21,7 @@
 # array of templates to generate alongside fonts
 # accepts shortcuts or paths (absolute, relative to INPUT, or relative to `pwd`)
 #
-# shortcuts: 
+# shortcuts:
 #   preview
 #   css, scss
 #   bootstrap, bootstrap-scss
@@ -30,7 +30,7 @@
 # default: [ css, preview ]
 
 #templates: [ scss, preview, path/from/INPUT ]
-templates: [ css, preview, ./icons.json ]
+templates: [ css, preview ]
 
 # ---------------------------------------------------------------------------- #
 # Font Name
@@ -39,7 +39,7 @@ templates: [ css, preview, ./icons.json ]
 # default: fontcustom
 
 font_name: font-mfizz
-  
+
 # ---------------------------------------------------------------------------- #
 # Font Hash
 # option to attach a cache-breaking fingerprint to each font file

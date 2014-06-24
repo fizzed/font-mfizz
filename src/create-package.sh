@@ -1,20 +1,14 @@
 #!/bin/sh
 
-VERSION="1.3-SNAPSHOT"
-BUILD_DIR="font-mfizz-$VERSION"
+VERSION="1.4-SNAPSHOT"
+BUILD_DIR="font-mfizz"
+DIST_DIR="font"
 
-rm -Rf $BUILD_DIR
-mkdir $BUILD_DIR
+rm -Rf $DIST_DIR
+mkdir $DIST_DIR
 
 echo "Copying custom font..."
-cp -Rv svg/fontcustom/* $BUILD_DIR/
-
-echo "Renaming main css file..."
-mv $BUILD_DIR/fontcustom.css $BUILD_DIR/font-mfizz.css
-
-#echo "Adding copyright to main css file..."
-#sed -i 's/\/\*(.*)\*\//test/g' $BUILD_DIR/font-mfizz.css
-#sed -i "s/\ \*\ Font.*$/ \* Font Mfizz Copyright Mfizz Inc 2013 \(http:\/\/mfizz.com\/\)\n \* Version: $VERSION\n \* Web: http:\/\/mfizz.com\/oss\/font-mfizz/g" $BUILD_DIR/font-mfizz.css
+cp -Rv svg/* $BUILD_DIR/
 
 echo "Creating better main css file..."
 cat > $BUILD_DIR/font-mfizz.new.css <<EOF
@@ -26,12 +20,12 @@ cat > $BUILD_DIR/font-mfizz.new.css <<EOF
  * Project: http://mfizz.com/oss/font-mfizz
  *
  * The font designed for technology and software geeks representing programming
- * languages, operating systems, software engineering, and technology. 
+ * languages, operating systems, software engineering, and technology.
  *
  * Mfizz Inc
  * Web: http://mfizz.com/
  * Twitter: http://twitter.com/mfizz_inc
- * 
+ *
  * Joe Lauer
  * Web: http://lauer.bz/
  * Twitter: http://twitter.com/jjlauer
