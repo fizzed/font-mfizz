@@ -97,6 +97,7 @@
 .icon-mobile-device:before,
 .icon-mobile-phone-alt:before,
 .icon-mobile-phone-broadcast:before,
+.icon-mongodb:before,
 .icon-mssql:before,
 .icon-mysql:before,
 .icon-mysql-alt:before,
@@ -139,7 +140,8 @@
 .icon-symfony:before,
 .icon-tomcat:before,
 .icon-ubuntu:before,
-.icon-wireless:before {
+.icon-wireless:before,
+.icon-wordpress:before {
   display: inline-block;
   font-family: "FontMfizz";
   font-style: normal;
@@ -207,46 +209,48 @@
 .icon-mobile-device:before { content: "\f132"; }
 .icon-mobile-phone-alt:before { content: "\f133"; }
 .icon-mobile-phone-broadcast:before { content: "\f134"; }
-.icon-mssql:before { content: "\f135"; }
-.icon-mysql:before { content: "\f136"; }
-.icon-mysql-alt:before { content: "\f137"; }
-.icon-netbsd:before { content: "\f138"; }
-.icon-nginx:before { content: "\f139"; }
-.icon-nginx-alt:before { content: "\f13a"; }
-.icon-nginx-alt2:before { content: "\f13b"; }
-.icon-nodejs:before { content: "\f13c"; }
-.icon-objc:before { content: "\f13d"; }
-.icon-oracle:before { content: "\f13e"; }
-.icon-oracle-alt:before { content: "\f13f"; }
-.icon-osx:before { content: "\f140"; }
-.icon-perl:before { content: "\f141"; }
-.icon-phone-alt:before { content: "\f142"; }
-.icon-phone-gap:before { content: "\f143"; }
-.icon-phone-retro:before { content: "\f144"; }
-.icon-php:before { content: "\f145"; }
-.icon-php-alt:before { content: "\f146"; }
-.icon-platter:before { content: "\f147"; }
-.icon-playframework:before { content: "\f148"; }
-.icon-playframework-alt:before { content: "\f149"; }
-.icon-postgres:before { content: "\f14a"; }
-.icon-postgres-alt:before { content: "\f14b"; }
-.icon-python:before { content: "\f14c"; }
-.icon-raspberrypi:before { content: "\f14d"; }
-.icon-redhat:before { content: "\f14e"; }
-.icon-redis:before { content: "\f14f"; }
-.icon-ruby:before { content: "\f150"; }
-.icon-ruby-on-rails:before { content: "\f151"; }
-.icon-ruby-on-rails-alt:before { content: "\f152"; }
-.icon-satellite:before { content: "\f153"; }
-.icon-scala:before { content: "\f154"; }
-.icon-scala-alt:before { content: "\f155"; }
-.icon-script:before { content: "\f156"; }
-.icon-script-alt:before { content: "\f157"; }
-.icon-shell:before { content: "\f158"; }
-.icon-solaris:before { content: "\f159"; }
-.icon-splatter:before { content: "\f15a"; }
-.icon-suse:before { content: "\f15b"; }
-.icon-symfony:before { content: "\f15c"; }
-.icon-tomcat:before { content: "\f15d"; }
-.icon-ubuntu:before { content: "\f15e"; }
-.icon-wireless:before { content: "\f15f"; }
+.icon-mongodb:before { content: "\f135"; }
+.icon-mssql:before { content: "\f136"; }
+.icon-mysql:before { content: "\f137"; }
+.icon-mysql-alt:before { content: "\f138"; }
+.icon-netbsd:before { content: "\f139"; }
+.icon-nginx:before { content: "\f13a"; }
+.icon-nginx-alt:before { content: "\f13b"; }
+.icon-nginx-alt2:before { content: "\f13c"; }
+.icon-nodejs:before { content: "\f13d"; }
+.icon-objc:before { content: "\f13e"; }
+.icon-oracle:before { content: "\f13f"; }
+.icon-oracle-alt:before { content: "\f140"; }
+.icon-osx:before { content: "\f141"; }
+.icon-perl:before { content: "\f142"; }
+.icon-phone-alt:before { content: "\f143"; }
+.icon-phone-gap:before { content: "\f144"; }
+.icon-phone-retro:before { content: "\f145"; }
+.icon-php:before { content: "\f146"; }
+.icon-php-alt:before { content: "\f147"; }
+.icon-platter:before { content: "\f148"; }
+.icon-playframework:before { content: "\f149"; }
+.icon-playframework-alt:before { content: "\f14a"; }
+.icon-postgres:before { content: "\f14b"; }
+.icon-postgres-alt:before { content: "\f14c"; }
+.icon-python:before { content: "\f14d"; }
+.icon-raspberrypi:before { content: "\f14e"; }
+.icon-redhat:before { content: "\f14f"; }
+.icon-redis:before { content: "\f150"; }
+.icon-ruby:before { content: "\f151"; }
+.icon-ruby-on-rails:before { content: "\f152"; }
+.icon-ruby-on-rails-alt:before { content: "\f153"; }
+.icon-satellite:before { content: "\f154"; }
+.icon-scala:before { content: "\f155"; }
+.icon-scala-alt:before { content: "\f156"; }
+.icon-script:before { content: "\f157"; }
+.icon-script-alt:before { content: "\f158"; }
+.icon-shell:before { content: "\f159"; }
+.icon-solaris:before { content: "\f15a"; }
+.icon-splatter:before { content: "\f15b"; }
+.icon-suse:before { content: "\f15c"; }
+.icon-symfony:before { content: "\f15d"; }
+.icon-tomcat:before { content: "\f15e"; }
+.icon-ubuntu:before { content: "\f15f"; }
+.icon-wireless:before { content: "\f160"; }
+.icon-wordpress:before { content: "\f161"; }
