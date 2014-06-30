@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "d407e515f57dcb57c82c6cc6217a110b2a721f0dae9e32140e155bb10ff6aa11",
-    "current": "d407e515f57dcb57c82c6cc6217a110b2a721f0dae9e32140e155bb10ff6aa11"
+    "previous": "a8f4cae30c65f9e2b142ae7147a3c2799eefa677388a516877ead8745b4f5789",
+    "current": "a8f4cae30c65f9e2b142ae7147a3c2799eefa677388a516877ead8745b4f5789"
   },
   "fonts": [
-    "font-mfizz/font-mfizz_d407e515f57dcb57c82c6cc6217a110b.ttf",
-    "font-mfizz/font-mfizz_d407e515f57dcb57c82c6cc6217a110b.svg",
-    "font-mfizz/font-mfizz_d407e515f57dcb57c82c6cc6217a110b.woff",
-    "font-mfizz/font-mfizz_d407e515f57dcb57c82c6cc6217a110b.eot"
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.ttf",
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.svg",
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.woff",
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.eot"
   ],
   "glyphs": {
     "3dprint": {
@@ -382,24 +382,28 @@
       "codepoint": 61788,
       "source": "svg/suse.svg"
     },
-    "symfony": {
+    "svg": {
       "codepoint": 61789,
+      "source": "svg/svg.svg"
+    },
+    "symfony": {
+      "codepoint": 61790,
       "source": "svg/symfony.svg"
     },
     "tomcat": {
-      "codepoint": 61790,
+      "codepoint": 61791,
       "source": "svg/tomcat.svg"
     },
     "ubuntu": {
-      "codepoint": 61791,
+      "codepoint": 61792,
       "source": "svg/ubuntu.svg"
     },
     "wireless": {
-      "codepoint": 61792,
+      "codepoint": 61793,
       "source": "svg/wireless.svg"
     },
     "wordpress": {
-      "codepoint": 61793,
+      "codepoint": 61794,
       "source": "svg/wordpress.svg"
     }
   },

@@ -137,6 +137,7 @@
 .icon-solaris:before,
 .icon-splatter:before,
 .icon-suse:before,
+.icon-svg:before,
 .icon-symfony:before,
 .icon-tomcat:before,
 .icon-ubuntu:before,
@@ -249,8 +250,9 @@
 .icon-solaris:before { content: "\f15a"; }
 .icon-splatter:before { content: "\f15b"; }
 .icon-suse:before { content: "\f15c"; }
-.icon-symfony:before { content: "\f15d"; }
-.icon-tomcat:before { content: "\f15e"; }
-.icon-ubuntu:before { content: "\f15f"; }
-.icon-wireless:before { content: "\f160"; }
-.icon-wordpress:before { content: "\f161"; }
+.icon-svg:before { content: "\f15d"; }
+.icon-symfony:before { content: "\f15e"; }
+.icon-tomcat:before { content: "\f15f"; }
+.icon-ubuntu:before { content: "\f160"; }
+.icon-wireless:before { content: "\f161"; }
+.icon-wordpress:before { content: "\f162"; }
