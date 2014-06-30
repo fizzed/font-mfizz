@@ -1,0 +1,45 @@
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.05 100" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata3">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:title/>
+    <dc:description/>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>unsorted</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:publisher>
+     <cc:Agent rdf:about="http://www.openclipart.org/">
+      <dc:title>Open Clip Art Library, Source: Open Icon Library</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title/>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title/>
+     </cc:Agent>
+    </dc:rights>
+    <dc:date/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource="http://web.resource.org/cc/PublicDomain"/>
+    <dc:language>en</dc:language>
+   </cc:Work>
+   <cc:License rdf:about="http://web.resource.org/cc/PublicDomain">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <defs id="defs4"></defs>
+ <g id="layer1" transform="translate(0,-952.36218)">
+  <path id="path3604" d="M46.859,1052.4,30.973,1049,15,1038.6,3.4958,1020.9,0.43438,1004.8,0,991.43s1.7258-8.9835,2.6108-10.753c0.88496-1.7699,7.1516-11.432,7.1516-11.432l11.875-10.249,16.372-6.6372,11.062,0.44248,11.17,2.3563,9.1841,4.7234,7.5221,11.062s1.3274,5.7522,1.7699,7.5221c0.44248,1.7699,1.3274,13.274,1.3274,13.274l-4.4248,12.832-9.292,9.292-12.389,5.3097-12.832-3.9822-7.9646-7.0797-3.0973-11.062,3.0973-10.177,7.9646-7.0796,9.3361-0.92903,6.5931,3.5398,4.8673,7.1237-8.4071-6.6372-5.3097-1.3274-6.1947,1.7699-3.5398,3.5398-3.5398,5.7522v8.8495l4.4248,6.1947,8.4071,5.3098h8.4071l8.8496-4.4248,4.4248-6.1947s2.6549-6.6372,2.6549-9.292c0-2.6549,0-8.4071-0.88496-10.619-0.88496-2.2124-5.3097-11.062-5.3097-11.062s-3.9823-3.5398-5.7522-4.4248c-1.7699-0.88496-7.5581-3.2053-7.5581-3.2053s-6.6012-1.2195-8.8136-1.2195-10.619,2.6549-10.619,2.6549l-9.292,4.8673-8.4071,6.1947-5.7522,10.177-1.7699,10.177,0.44248,9.7345,0.88496,7.5221,3.5398,7.9647,4.4248,8.8495,6.6372,7.0796,6.6372,7.0797,10.001,5.3098,6.371,2.2123z" fill="#d5094a"/>
+ </g>
+</svg>

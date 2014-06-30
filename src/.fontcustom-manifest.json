@@ -1,0 +1,440 @@
+{
+  "checksum": {
+    "previous": "a8f4cae30c65f9e2b142ae7147a3c2799eefa677388a516877ead8745b4f5789",
+    "current": "a8f4cae30c65f9e2b142ae7147a3c2799eefa677388a516877ead8745b4f5789"
+  },
+  "fonts": [
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.ttf",
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.svg",
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.woff",
+    "font-mfizz/font-mfizz_a8f4cae30c65f9e2b142ae7147a3c279.eot"
+  ],
+  "glyphs": {
+    "3dprint": {
+      "codepoint": 61696,
+      "source": "svg/3dprint.svg"
+    },
+    "antenna": {
+      "codepoint": 61697,
+      "source": "svg/antenna.svg"
+    },
+    "apache": {
+      "codepoint": 61698,
+      "source": "svg/apache.svg"
+    },
+    "aws": {
+      "codepoint": 61699,
+      "source": "svg/aws.svg"
+    },
+    "blackberry": {
+      "codepoint": 61700,
+      "source": "svg/blackberry.svg"
+    },
+    "bomb": {
+      "codepoint": 61701,
+      "source": "svg/bomb.svg"
+    },
+    "c": {
+      "codepoint": 61702,
+      "source": "svg/c.svg"
+    },
+    "cassandra": {
+      "codepoint": 61703,
+      "source": "svg/cassandra.svg"
+    },
+    "centos": {
+      "codepoint": 61704,
+      "source": "svg/centos.svg"
+    },
+    "clojure": {
+      "codepoint": 61705,
+      "source": "svg/clojure.svg"
+    },
+    "coffee-bean": {
+      "codepoint": 61706,
+      "source": "svg/coffee-bean.svg"
+    },
+    "cplusplus": {
+      "codepoint": 61707,
+      "source": "svg/cplusplus.svg"
+    },
+    "csharp": {
+      "codepoint": 61708,
+      "source": "svg/csharp.svg"
+    },
+    "css": {
+      "codepoint": 61709,
+      "source": "svg/css.svg"
+    },
+    "database": {
+      "codepoint": 61710,
+      "source": "svg/database.svg"
+    },
+    "database-alt": {
+      "codepoint": 61711,
+      "source": "svg/database-alt.svg"
+    },
+    "database-alt2": {
+      "codepoint": 61712,
+      "source": "svg/database-alt2.svg"
+    },
+    "debian": {
+      "codepoint": 61713,
+      "source": "svg/debian.svg"
+    },
+    "dreamhost": {
+      "codepoint": 61714,
+      "source": "svg/dreamhost.svg"
+    },
+    "elixir": {
+      "codepoint": 61715,
+      "source": "svg/elixir.svg"
+    },
+    "erlang": {
+      "codepoint": 61716,
+      "source": "svg/erlang.svg"
+    },
+    "fedora": {
+      "codepoint": 61717,
+      "source": "svg/fedora.svg"
+    },
+    "fire-alt": {
+      "codepoint": 61718,
+      "source": "svg/fire-alt.svg"
+    },
+    "freebsd": {
+      "codepoint": 61719,
+      "source": "svg/freebsd.svg"
+    },
+    "ghost": {
+      "codepoint": 61720,
+      "source": "svg/ghost.svg"
+    },
+    "gnome": {
+      "codepoint": 61721,
+      "source": "svg/gnome.svg"
+    },
+    "google": {
+      "codepoint": 61722,
+      "source": "svg/google.svg"
+    },
+    "google-alt": {
+      "codepoint": 61723,
+      "source": "svg/google-alt.svg"
+    },
+    "google-code": {
+      "codepoint": 61724,
+      "source": "svg/google-code.svg"
+    },
+    "google-developers": {
+      "codepoint": 61725,
+      "source": "svg/google-developers.svg"
+    },
+    "grails": {
+      "codepoint": 61726,
+      "source": "svg/grails.svg"
+    },
+    "grails-alt": {
+      "codepoint": 61727,
+      "source": "svg/grails-alt.svg"
+    },
+    "hadoop": {
+      "codepoint": 61728,
+      "source": "svg/hadoop.svg"
+    },
+    "haskell": {
+      "codepoint": 61729,
+      "source": "svg/haskell.svg"
+    },
+    "heroku": {
+      "codepoint": 61730,
+      "source": "svg/heroku.svg"
+    },
+    "html": {
+      "codepoint": 61731,
+      "source": "svg/html.svg"
+    },
+    "iphone": {
+      "codepoint": 61732,
+      "source": "svg/iphone.svg"
+    },
+    "java": {
+      "codepoint": 61733,
+      "source": "svg/java.svg"
+    },
+    "java-bold": {
+      "codepoint": 61734,
+      "source": "svg/java-bold.svg"
+    },
+    "java-duke": {
+      "codepoint": 61735,
+      "source": "svg/java-duke.svg"
+    },
+    "javascript": {
+      "codepoint": 61736,
+      "source": "svg/javascript.svg"
+    },
+    "jetty": {
+      "codepoint": 61737,
+      "source": "svg/jetty.svg"
+    },
+    "kde": {
+      "codepoint": 61738,
+      "source": "svg/kde.svg"
+    },
+    "laravel": {
+      "codepoint": 61739,
+      "source": "svg/laravel.svg"
+    },
+    "line-graph": {
+      "codepoint": 61740,
+      "source": "svg/line-graph.svg"
+    },
+    "linux-mint": {
+      "codepoint": 61741,
+      "source": "svg/linux-mint.svg"
+    },
+    "looking": {
+      "codepoint": 61742,
+      "source": "svg/looking.svg"
+    },
+    "mariadb": {
+      "codepoint": 61743,
+      "source": "svg/mariadb.svg"
+    },
+    "mfizz": {
+      "codepoint": 61744,
+      "source": "svg/mfizz.svg"
+    },
+    "microscope": {
+      "codepoint": 61745,
+      "source": "svg/microscope.svg"
+    },
+    "mobile-device": {
+      "codepoint": 61746,
+      "source": "svg/mobile-device.svg"
+    },
+    "mobile-phone-alt": {
+      "codepoint": 61747,
+      "source": "svg/mobile-phone-alt.svg"
+    },
+    "mobile-phone-broadcast": {
+      "codepoint": 61748,
+      "source": "svg/mobile-phone-broadcast.svg"
+    },
+    "mongodb": {
+      "codepoint": 61749,
+      "source": "svg/mongodb.svg"
+    },
+    "mssql": {
+      "codepoint": 61750,
+      "source": "svg/mssql.svg"
+    },
+    "mysql": {
+      "codepoint": 61751,
+      "source": "svg/mysql.svg"
+    },
+    "mysql-alt": {
+      "codepoint": 61752,
+      "source": "svg/mysql-alt.svg"
+    },
+    "netbsd": {
+      "codepoint": 61753,
+      "source": "svg/netbsd.svg"
+    },
+    "nginx": {
+      "codepoint": 61754,
+      "source": "svg/nginx.svg"
+    },
+    "nginx-alt": {
+      "codepoint": 61755,
+      "source": "svg/nginx-alt.svg"
+    },
+    "nginx-alt2": {
+      "codepoint": 61756,
+      "source": "svg/nginx-alt2.svg"
+    },
+    "nodejs": {
+      "codepoint": 61757,
+      "source": "svg/nodejs.svg"
+    },
+    "objc": {
+      "codepoint": 61758,
+      "source": "svg/objc.svg"
+    },
+    "oracle": {
+      "codepoint": 61759,
+      "source": "svg/oracle.svg"
+    },
+    "oracle-alt": {
+      "codepoint": 61760,
+      "source": "svg/oracle-alt.svg"
+    },
+    "osx": {
+      "codepoint": 61761,
+      "source": "svg/osx.svg"
+    },
+    "perl": {
+      "codepoint": 61762,
+      "source": "svg/perl.svg"
+    },
+    "phone-alt": {
+      "codepoint": 61763,
+      "source": "svg/phone-alt.svg"
+    },
+    "phone-gap": {
+      "codepoint": 61764,
+      "source": "svg/phone-gap.svg"
+    },
+    "phone-retro": {
+      "codepoint": 61765,
+      "source": "svg/phone-retro.svg"
+    },
+    "php": {
+      "codepoint": 61766,
+      "source": "svg/php.svg"
+    },
+    "php-alt": {
+      "codepoint": 61767,
+      "source": "svg/php-alt.svg"
+    },
+    "platter": {
+      "codepoint": 61768,
+      "source": "svg/platter.svg"
+    },
+    "playframework": {
+      "codepoint": 61769,
+      "source": "svg/playframework.svg"
+    },
+    "playframework-alt": {
+      "codepoint": 61770,
+      "source": "svg/playframework-alt.svg"
+    },
+    "postgres": {
+      "codepoint": 61771,
+      "source": "svg/postgres.svg"
+    },
+    "postgres-alt": {
+      "codepoint": 61772,
+      "source": "svg/postgres-alt.svg"
+    },
+    "python": {
+      "codepoint": 61773,
+      "source": "svg/python.svg"
+    },
+    "raspberrypi": {
+      "codepoint": 61774,
+      "source": "svg/raspberrypi.svg"
+    },
+    "redhat": {
+      "codepoint": 61775,
+      "source": "svg/redhat.svg"
+    },
+    "redis": {
+      "codepoint": 61776,
+      "source": "svg/redis.svg"
+    },
+    "ruby": {
+      "codepoint": 61777,
+      "source": "svg/ruby.svg"
+    },
+    "ruby-on-rails": {
+      "codepoint": 61778,
+      "source": "svg/ruby-on-rails.svg"
+    },
+    "ruby-on-rails-alt": {
+      "codepoint": 61779,
+      "source": "svg/ruby-on-rails-alt.svg"
+    },
+    "satellite": {
+      "codepoint": 61780,
+      "source": "svg/satellite.svg"
+    },
+    "scala": {
+      "codepoint": 61781,
+      "source": "svg/scala.svg"
+    },
+    "scala-alt": {
+      "codepoint": 61782,
+      "source": "svg/scala-alt.svg"
+    },
+    "script": {
+      "codepoint": 61783,
+      "source": "svg/script.svg"
+    },
+    "script-alt": {
+      "codepoint": 61784,
+      "source": "svg/script-alt.svg"
+    },
+    "shell": {
+      "codepoint": 61785,
+      "source": "svg/shell.svg"
+    },
+    "solaris": {
+      "codepoint": 61786,
+      "source": "svg/solaris.svg"
+    },
+    "splatter": {
+      "codepoint": 61787,
+      "source": "svg/splatter.svg"
+    },
+    "suse": {
+      "codepoint": 61788,
+      "source": "svg/suse.svg"
+    },
+    "svg": {
+      "codepoint": 61789,
+      "source": "svg/svg.svg"
+    },
+    "symfony": {
+      "codepoint": 61790,
+      "source": "svg/symfony.svg"
+    },
+    "tomcat": {
+      "codepoint": 61791,
+      "source": "svg/tomcat.svg"
+    },
+    "ubuntu": {
+      "codepoint": 61792,
+      "source": "svg/ubuntu.svg"
+    },
+    "wireless": {
+      "codepoint": 61793,
+      "source": "svg/wireless.svg"
+    },
+    "wordpress": {
+      "codepoint": 61794,
+      "source": "svg/wordpress.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "config.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": true,
+    "file_hash": false,
+    "font_name": "font-mfizz",
+    "force": false,
+    "input": {
+      "templates": "svg",
+      "vectors": "svg"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "font-mfizz",
+      "fonts": "font-mfizz",
+      "preview": "font-mfizz"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ],
+    "verbose": true
+  },
+  "templates": [
+    "font-mfizz/font-mfizz.css",
+    "font-mfizz/font-mfizz-preview.html"
+  ]
+}
