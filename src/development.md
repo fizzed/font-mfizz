@@ -66,6 +66,20 @@ Execute this:
 
 This will re-generate the font directory in the root of the repo.
 
+## Known issues
+
+Due to a limitation with FontCustom, the glyphs are allocated specific Unicode
+addresses **alphabetically***.
+
+This means that if you add a new icon, the Unicode addresses
+of all the icons that occur alphabetically after it will be different.
+
+Currently, there does **not** appear to be a way to assign static addresses
+to glyphs with FontCustom, but there has been some talk in their
+Github issues.
+
+This could be a real problem if you are using these icons in a non-CSS
+environment.
 
 ## Notes
 
