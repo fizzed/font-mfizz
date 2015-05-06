@@ -1,7 +1,7 @@
 {
   "name": "font-mfizz",
   "version": "1.0.0",
-  "main": "path/to/main.css",
+  "main": "font/font-mfizz.css",
   "ignore": [],
   "dependencies": {},
   "devDependencies": {}
