@@ -1,0 +1,19 @@
+{
+  "name": "font-mfizz",
+  "version": "1.0.0",
+  "description": "Font Mfizz - Vector Icons for Technology and Software Geeks ===========================================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolmajta/font-mfizz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karolmajta/font-mfizz/issues"
+  },
+  "homepage": "https://github.com/karolmajta/font-mfizz#readme"
+}
