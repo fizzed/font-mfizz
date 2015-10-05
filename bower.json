@@ -1,0 +1,17 @@
+{
+  "name": "font-mfizz",
+  "description": "Font Mfizz",
+  "version": "1.2.0",
+  "keywords": [],
+  "homepage": "http://mfizz.com/oss/font-mfizzo",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT",
+  "main": [
+    "./font/font-mfizz.*"
+  ],
+  "ignore": [
+    "*/.*",
+    "bower.json"
+  ]
+}
