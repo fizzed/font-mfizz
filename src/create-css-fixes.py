@@ -5,13 +5,13 @@
 #
 # sudo pip install PyYAML
 # sudo pip install requests
-# 
+#
 
 import sys, os, getopt
 sys.dont_write_bytecode = True
 import json
 
-glyph_list = json.load(open("svg/fontcustom/icons.json", "rb"))
+glyph_list = json.load(open("svg/icons.json", "rb"))
 glyphs = set()
 
 for g in glyph_list:
