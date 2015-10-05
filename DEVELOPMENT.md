@@ -58,7 +58,7 @@ not be properly hinted.
 ## Preparing the artwork
 
 The simplest way to get the sizing right for the artwork is to open one of the
-existing SVN files into your editor (Adobe Illustrator, InkScape), save a
+existing SVG files into your editor (Adobe Illustrator, InkScape), save a
 copy of it with the new name, delete the current artwork, then paste yours in,
 scale to the artboard size.
 
@@ -100,7 +100,7 @@ environment.
 
 ## Notes
 
-`./compile.sh` will compile the font into `font-mfizz`
+`src/create-package.sh` will compile the font into `font-mfizz`
 
 There is a `preview.html` file in there which will display how the icons render.
 
