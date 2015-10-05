@@ -1,4 +1,9 @@
-# Font Mfizz - Vector Icons for Technology and Software Geeks
+Font Mfizz by Fizzed
+=======================================
+
+ - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
+
+## Vector Icons for Technology and Software Geeks
 
 Font Mfizz provides scalable vector icons representing programming languages,
 operating systems, software engineering, and technology. It was designed as an
@@ -6,27 +11,36 @@ extension to Font Awesome, it is an iconic font designed for technology and soft
 geeks. It can instantly be customized — size, color, drop shadow, and anything that
 can be done with the power of CSS.
 
-For full documentation and packages to download (rather than use master),
-visit [MFizz](http://mfizz.com/oss/font-mfizz)
+For documentation and packages to download (rather than use master),
+visit [Fizzed](http://mfizz.com/oss/font-mfizz)
 
-Designed by [Mfizz Inc](http://mfizz.com/), [Joe Lauer](http://lauer.bz/).
+Designed by [Fizz, Inc.](http://fizzed.com/)
 
-Updates tweeted [@mfizz_inc](http://twitter.com/mfizz_inc)
+Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
-## Adding new icons
+## Can I get an icon added?
 
-Found some interesting font conversion resources here:
+Do you want a new icon added?  Since this font is a hobby, the fastest way to get a new
+one added is to add it yourself.  We're happy to accept pull requests and periodically publish
+new builds.  Here are the steps to get an icon officially added:
 
-[svg2ttf](https://github.com/fontello/svg2ttf)
-[Webify](https://github.com/ananthakumaran/webify)
-[ttfautohint](http://www.freetype.org/ttfautohint/)
-[eotfast](http://eotfast.com/)
-[css3FontConverter](https://github.com/zoltan-dulac/css3FontConverter)
-[How to create perfect web-fonts in 3 steps](http://pixelsvsbytes.com/blog/2013/11/how-to-create-perfect-web-fonts-in-3-steps/)
+1. Does the icon fit within the theme of this font?  Does it represent a programming language,
+operating system, or software engineering?
 
-## Troubleshooting
+2. Find (or create) a .svg (Scalable Vector Graphics) version of the icon you'd like to add.
+Please note that you may need to tweak and simplify your .svg file for it to be properly
+converted into a web font.
 
-* Currently not sure how to invert the co-ordinate system, as it comes out of
-Adobe Illustrator upside down and flipped.
-* Also don't know what the correct dimensions need to be, and how to configure
-that.
+3. [Install the build dependencies](DEVELOPMENT.md) to compile the .svg files into a web font.
+
+4. Add your .svg file to `src/svg`
+
+5. Run the `src/create-package.sh` shell script
+
+6. Open up `target/preview.html` in your browser to see how it looks
+
+7. Submit a pull request
+
+
+
+

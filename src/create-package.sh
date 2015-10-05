@@ -1,8 +1,13 @@
 #!/bin/sh
 
+# make sure working directory is same as script
+BASEDIR=$(dirname $0)
+echo $BASEDIR
+cd $BASEDIR
+
 VERSION="2.0-SNAPSHOT"
 BUILD_DIR="font-mfizz"
-DIST_DIR="../font"
+DIST_DIR="../target"
 
 rm .fontcustom-manifest.json
 
