@@ -73,6 +73,16 @@ preview of your new font by opening this in your browser
 
     target/preview.html
 
+## Build issues
+
+The most likely issue is that your version of FontCustom is different than what
+the scripts were developed with.  Check your version of FontCustom
+
+    gem list fontcustom
+
+If not v1.3.8 then you can either try that specific version OR figure out what
+changed with FontCustom and submit a pull request to work with the newer version.
+
 ## Known issues
 
 Due to a limitation with FontCustom, the glyphs are allocated specific Unicode
