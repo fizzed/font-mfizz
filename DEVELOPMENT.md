@@ -1,11 +1,13 @@
 # Development process
 
-How to to compile and create font packages.
+How to to compile and create font packages.  [FontCustom](https://github.com/FontCustom/fontcustom)
+essentially does all the heavy lifting.  This build process is heavily dependent on the underlying
+version of FontCustom installed.
 
-## Prerequisites
+## What you need
 
-* Ruby 1.9.x or greater.
-* Python 3 ????
+* Ruby 1.9.x or greater
+* FontCustom 1.3.8 or greater
 
 ## Install
 
@@ -64,9 +66,12 @@ scale to the artboard size.
 
 Execute this:
 
-    ./create-package.sh
+    src/create-package.sh
 
-This will re-generate the font directory in the root of the repo.
+This will re-generate the font directory in the root of the repo.  Browse a 
+preview of your new font by opening this in your browser
+
+    target/preview.html
 
 ## Known issues
 
