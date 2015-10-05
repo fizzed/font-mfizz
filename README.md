@@ -39,7 +39,7 @@ becomes .icon-java in the css).
 
 6. Open up `target/preview.html` in your browser to see how it looks
 
-7. Submit a pull request
+7. Submit a pull request and just include the src/svg file(s)
 
 
 
