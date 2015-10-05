@@ -6,13 +6,12 @@ Font Mfizz by Fizzed
 ## Vector Icons for Technology and Software Geeks
 
 Font Mfizz provides scalable vector icons representing programming languages,
-operating systems, software engineering, and technology. It was designed as an
-extension to Font Awesome, it is an iconic font designed for technology and software
-geeks. It can instantly be customized — size, color, drop shadow, and anything that
-can be done with the power of CSS.
+operating systems, software engineering, and technology. It was designed designed
+for technology and software geeks. It can be customized — size, color, drop shadow,
+and anything that can be done with the power of CSS.
 
 For documentation and packages to download (rather than use master),
-visit [Fizzed](http://mfizz.com/oss/font-mfizz)
+visit [Fizzed](http://fizzed.com/oss/font-mfizz)
 
 Designed by [Fizz, Inc.](http://fizzed.com/)
 
