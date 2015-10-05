@@ -10,8 +10,7 @@ operating systems, software engineering, and technology. It was designed designe
 for technology and software geeks. It can be customized — size, color, drop shadow,
 and anything that can be done with the power of CSS.
 
-For documentation and packages to download (rather than use master),
-visit [Fizzed](http://fizzed.com/oss/font-mfizz)
+[View icons in action and usage information](http://fizzed.com/oss/font-mfizz)
 
 Designed by [Fizzed, Inc.](http://fizzed.com/)
 
