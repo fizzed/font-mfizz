@@ -1,0 +1,563 @@
+categories:
+  lang: Programming languages
+  framework: Frameworks
+  brand: Brands
+  db: Databases
+  appos: Applications and operating systems
+  files: File types
+  mobile: Mobile
+  misc: Miscellaneous (Deprecated)
+
+icons:
+
+  #
+  # Applications and operating systems
+  #
+  - name: Raspberry Pi
+    id: raspberrypi
+    version: 1.0
+    category: appos
+
+  - name: Gnome
+    id: gnome
+    version: 1.0
+    category: appos
+
+  - name: KDE
+    id: kde
+    version: 1.1
+    category: appos
+
+  - name: Ubuntu Linux
+    id: ubuntu
+    version: 1.0
+    category: appos
+
+  - name: Apache Foundation
+    id: apache
+    version: 1.0
+    category: appos
+
+  - name: Debian Linux
+    id: debian
+    version: 1.0
+    category: appos
+
+  - name: SUSE Linux
+    id: suse
+    version: 1.0
+    category: appos
+
+  - name: Mac OS X
+    id: osx
+    version: 1.1
+    category: appos
+
+  - name: Red Hat Linux
+    id: redhat
+    version: 1.1
+    category: appos
+    web: http://www.redhat.com/
+
+  - name: Jetty - Servlet engine and HTTP server
+    id: jetty
+    version: 1.1
+    category: appos
+    web: http://www.eclipse.org/jetty/
+    copyright: Original artwork designed by Joe Lauer derived from Jetty logo
+
+  - name: NetBSD
+    id: netbsd
+    version: 1.1
+    category: appos
+
+  - name: Solaris
+    id: solaris
+    version: 1.1
+    category: appos
+
+  - name: Apache Tomcat
+    id: tomcat
+    version: 1.1
+    category: appos
+
+  - name: FreeBSD
+    id: freebsd
+    version: 1.1
+    category: appos
+
+  - name: Linux Mint
+    id: linux-mint
+    version: 1.1
+    category: appos
+
+  - name: NGiNX
+    id: nginx
+    version: 1.1
+    category: appos
+    web: http://nginx.org/
+    copyright: Original artwork designed by Joe Lauer derived from nginx logo
+
+  - name: NGiNX (Alt)
+    id: nginx-alt
+    version: 1.1
+    category: appos
+    web: http://nginx.org/
+    copyright: Original artwork designed by Joe Lauer derived from nginx logo
+
+  - name: NGiNX (Alt 2)
+    id: nginx-alt2
+    version: 1.1
+    category: appos
+    web: http://nginx.org/
+    copyright: Original artwork designed by Joe Lauer derived from nginx logo
+
+  - name: CentOS Linux
+    id: centos
+    version: 1.2
+    category: appos
+    derived: http://en.wikipedia.org/wiki/File:CentOS_full_logo.svg
+
+  - name: Fedora Linux
+    id: fedora
+    version: 1.2
+    category: appos
+    derived: https://commons.wikimedia.org/wiki/File:Fedora_logo.svg
+
+  #
+  # mobile
+  #
+  - name: BlackBerry
+    id: blackberry
+    version: 1.0
+    category: mobile
+
+  - name: Antenna
+    id: antenna
+    version: 1.0
+    category: mobile
+
+  - name: Apple iPhone
+    id: iphone
+    version: 1.0
+    category: mobile
+
+  - name: Tablet/Phone
+    id: mobile-device
+    version: 1.0
+    category: mobile
+
+  - name: Mobile Phone (Broadcasting)
+    id: mobile-phone-broadcast
+    version: 1.0
+    category: mobile
+
+  - name: Mobile Phone (Alt)
+    id: mobile-phone-alt
+    version: 1.0
+    category: mobile
+
+  - name: Basic Phone
+    id: phone-alt
+    version: 1.0
+    category: mobile
+
+  - name: Retro Phone
+    id: phone-retro
+    version: 1.0
+    category: mobile
+
+  - name: Satellite
+    id: satellite
+    version: 1.0
+    category: mobile
+
+  - name: Wireless
+    id: wireless
+    version: 1.0
+    category: mobile
+
+  #
+  # programming languages
+  #
+  - name: Java
+    id: java
+    version: 1.0
+    category: lang
+
+  - name: Java (Bold)
+    id: java-bold
+    version: 1.0
+    category: lang
+    copyright: Derived from Java logo
+
+  - name: Java (Duke)
+    id: java-duke
+    version: 1.0
+    category: lang
+
+  - name: Objective C (iOS)
+    id: objc
+    version: 1.0
+    category: lang
+
+  - name: C++ (C Plus Plus)
+    id: cplusplus
+    version: 1.0
+    category: lang
+
+  - name: C# (C Sharp)
+    id: csharp
+    version: 1.0
+    category: lang
+
+  - name: Erlang
+    id: erlang
+    version: 2.0
+    category: lang
+
+  - name: Elixir
+    id: elixir
+    version: 2.0
+    category: lang
+
+  - name: Scala
+    id: scala
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Scala Alt
+    id: scala-alt
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Perl
+    id: perl
+    version: 1.0
+    category: lang
+
+  - name: Javascript
+    id: javascript
+    version: 1.0
+    category: lang
+
+  - name: Javascript Alt
+    id: javascript-alt
+    version: 2.0
+    category: lang
+
+  - name: NodeJS
+    id: nodejs
+    version: 1.0
+    category: lang
+
+  - name: PHP
+    id: php
+    version: 1.0
+    category: lang
+
+  - name: PHP (Alt)
+    id: php-alt
+    version: 1.1
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Ruby
+    id: ruby
+    version: 1.0
+    category: lang
+
+  - name: CSS
+    id: css
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: HTML
+    id: html
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Shell (sh/ksh/csh/tcsh/bash/zsh)
+    id: shell
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Script
+    id: script
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Script (Alt)
+    id: script-alt
+    version: 1.0
+    category: lang
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Python
+    id: python
+    version: 1.0
+    category: lang
+
+  - name: C
+    id: c
+    version: 1.2
+    category: lang
+    derived: http://en.wikipedia.org/wiki/File:The_C_Programming_Language,_First_Edition_Cover_(2).svg
+
+  - name: Clojure
+    id: clojure
+    version: 1.2
+    category: lang
+
+  - name: Haskell
+    id: haskell
+    version: 1.2
+    category: lang
+
+  #
+  # files
+  #
+
+  - name: Scalable Vector Graphics
+    id: svg
+    version: 2.0
+    category: files
+
+  #
+  # databases
+  #
+  - name: MySQL
+    id: mysql
+    version: 1.0
+    category: db
+
+  - name: MySQL (Alt)
+    id: mysql-alt
+    version: 1.0
+    category: db
+    copyright: Original artwork designed by Joe Lauer derived from MySQL logo
+ 
+  - name: MongoDB
+    id: mongodb
+    version: 2.0
+    category: db
+
+  - name: PostgreSQL
+    id: postgres
+    version: 1.0
+    category: db
+
+  - name: PostgreSQL (Alt)
+    id: postgres-alt
+    version: 1.0
+    category: db
+
+  - name: Microsoft SQL Server
+    id: mssql
+    version: 1.1
+    category: db
+
+  - name: Apache Hadoop
+    id: hadoop
+    version: 1.1
+    category: db
+
+  - name: Apache Cassandra
+    id: cassandra
+    version: 1.1
+    category: db
+
+  - name: Oracle
+    id: oracle
+    version: 1.1
+    category: db
+
+  - name: Oracle (Alt)
+    id: oracle-alt
+    version: 1.1
+    category: db
+
+  - name: Generic Database
+    id: database
+    version: 1.0
+    category: db
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Generic Database (Alt)
+    id: database-alt
+    version: 1.0
+    category: db
+    copyright: Original artwork designed by Joe Lauer
+
+  - name: Generic Database (Alt 2)
+    id: database-alt2
+    version: 1.0
+    category: db
+
+  - name: Redis
+    id: redis
+    version: 1.2
+    category: db
+    derived: https://github.com/antirez/redis-io/blob/master/public/images/redis-logo.svg
+
+  - name: Maria DB
+    id: mariadb
+    version: 1.2
+    category: db
+    derived: http://badges.mariadb.org/logo/MariaDB-seal-white-plainsvg.svg
+
+  #
+  # frameworks
+  #
+  - name: Play Framework
+    id: playframework
+    version: 1.0
+    category: framework
+    copyright: Original artwork designed by Joe Lauer derived from Play Framework logo
+
+  - name: Play Framework (Alt)
+    id: playframework-alt
+    version: 1.0
+    category: framework
+    copyright: Original artwork designed by Joe Lauer derived from Play Framework logo
+
+  - name: Ruby on Rails
+    id: ruby-on-rails
+    version: 1.2
+    category: framework
+    derived: http://upload.wikimedia.org/wikipedia/en/e/e9/Ruby_on_Rails.svg
+
+  - name: Ruby on Rails (Alt)
+    id: ruby-on-rails-alt
+    version: 1.2
+    category: framework
+    derived: http://upload.wikimedia.org/wikipedia/en/e/e9/Ruby_on_Rails.svg
+
+  - name: Grails
+    id: grails
+    version: 1.2
+    category: framework
+    derived: http://fossies.org/linux/www/grails-2.2.3.zip:a/grails-2.2.3/media/logos/grails-logo.svg
+
+  - name: Grails (Alt)
+    id: grails-alt
+    version: 1.2
+    category: framework
+    derived: http://fossies.org/linux/www/grails-2.2.3.zip:a/grails-2.2.3/media/logos/grails-logo.svg
+
+  - name: Laravel
+    id: laravel
+    version: 2.0
+    category: framework
+
+  - name: PhoneGap
+    id: phone-gap
+    version: 2.0
+    category: framework
+
+  - name: Symfony
+    id: symfony
+    version: 2.0
+    category: framework
+
+  #
+  # brands
+  #
+  - name: Amazon Web Services
+    id: aws
+    version: 1.2
+    category: brand
+    derived: http://upload.wikimedia.org/wikipedia/en/1/1d/AmazonWebservices_Logo.svg
+
+  - name: Heroku
+    id: heroku
+    version: 1.2
+    category: brand
+    derived: http://logos.heroku.com/images/heroku-logo-light.pdf
+
+  - name: Dream Host
+    id: dreamhost
+    version: 1.2
+    category: brand
+    derived: http://en.wikipedia.org/wiki/File:Dreamhost_logo.svg
+
+  - name: Google
+    id: google
+    version: 1.0
+    category: brand
+
+  - name: Google (Alt)
+    id: google-alt
+    version: 1.0
+    category: brand
+
+  - name: Google Developers
+    id: google-developers
+    version: 1.1
+    category: brand
+
+  - name: Google Code
+    id: google-code
+    version: 1.1
+    category: brand
+    copyright: Original artwork designed by Joe Lauer derived from Google Code logo
+
+  - name: WordPress
+    id: wordpress
+    version: 2.0
+    category: brand
+
+  #
+  # Misc (these will be deprecated as do not fit theme)
+  #
+  - name: 3D Printer
+    id: 3dprint
+    version: 1.0
+    category: misc
+
+  - name: Bomb (4xx/5xx errors)
+    id: bomb
+    version: 1.0
+    category: misc
+
+  - name: Splatter (4xx/5xx errors)
+    id: splatter
+    version: 1.0
+    category: misc
+
+  - name: Coffee Bean
+    id: coffee-bean
+    version: 1.0
+    category: misc
+
+  - name: Looking (searching, 404 error)
+    id: looking
+    version: 1.0
+    category: misc
+
+  - name: Line Graph
+    id: line-graph
+    version: 1.0
+    category: misc
+
+  - name: Ghost (4xx/5xx errors)
+    id: ghost
+    version: 1.0
+    category: misc
+
+  - name: Microscope (searching, 404 error)
+    id: microscope
+    version: 1.0
+    category: misc
+
+  - name: Fire (Alt) (4xx/5xx errors)
+    id: fire-alt
+    version: 1.0
+    category: misc
+

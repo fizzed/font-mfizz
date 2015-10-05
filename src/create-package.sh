@@ -51,6 +51,5 @@ mv $BUILD_DIR/font-mfizz.new.css $BUILD_DIR/font-mfizz.css
 echo "Fixing preview html"
 mv $BUILD_DIR/font-mfizz-preview.html $BUILD_DIR/preview.html
 
-rm .fontcustom-manifest.json
 rm -rf $DIST_DIR
 mv $BUILD_DIR $DIST_DIR

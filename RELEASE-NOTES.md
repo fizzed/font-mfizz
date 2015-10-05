@@ -8,11 +8,16 @@ Font Mfizz by Fizzed
  - Revamped project to let others contribute icons directly
  - Merged in great work by David Parry (@suranyami)
  - DEVELOPMENT.md doc
+ - New 'files' category for things like file types
+ - Added icon-javascript-alt
+ - Added icon-erlang
+ - Added icon-elixir
  - Added icon-wordpress
  - Added icon-mongodb
  - Added icon-laravel
  - Added icon-symfony
- - Added icon-phonegap
+ - Added icon-phone-gap
+ - Added icon-svg
 
 #### 1.2 - 2013-07-23
 
