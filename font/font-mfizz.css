@@ -1,16 +1,16 @@
 /*
- * Font Mfizz v1.4-SNAPSHOT
- * Copyright 2013 Mfizz Inc, Joe Lauer
+ * Font Mfizz v2.0-SNAPSHOT
+ * Copyright 2013-2015 Fizzed, Inc.
  * MIT License
  *
- * Project: http://mfizz.com/oss/font-mfizz
+ * Project: http://fizzed.com/oss/font-mfizz
  *
  * The font designed for technology and software geeks representing programming
  * languages, operating systems, software engineering, and technology.
  *
- * Mfizz Inc
- * Web: http://mfizz.com/
- * Twitter: http://twitter.com/mfizz_inc
+ * Fizzed, Inc.
+ * Web: http://fizzed.com/
+ * Twitter: http://twitter.com/fizzed_inc
  *
  * Joe Lauer
  * Web: http://lauer.bz/
@@ -20,14 +20,9 @@
 @font-face {
   font-family: "FontMfizz";
   src: url("./font-mfizz.eot");
-  src: url("./font-mfizz.eot");
-  src: url("./font-mfizz.eot?#iefix") format("embedded-opentype"),
   src: url("./font-mfizz.eot?#iefix") format("embedded-opentype"),
        url("./font-mfizz.woff") format("woff"),
-       url("./font-mfizz.woff") format("woff"),
        url("./font-mfizz.ttf") format("truetype"),
-       url("./font-mfizz.ttf") format("truetype"),
-       url("./font-mfizz.svg#font-mfizz") format("svg");
        url("./font-mfizz.svg#font-mfizz") format("svg");
   font-weight: normal;
   font-style: normal;
@@ -36,7 +31,6 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "FontMfizz";
-    src: url("./font-mfizz.svg#font-mfizz") format("svg");
     src: url("./font-mfizz.svg#font-mfizz") format("svg");
   }
 }

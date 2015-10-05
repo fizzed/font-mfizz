@@ -46,7 +46,8 @@ font_name: font-mfizz
 #
 # default: true
 
-file_hash: false
+no_hash: true
+force: true
 
 # ---------------------------------------------------------------------------- #
 # CSS Class Prefix

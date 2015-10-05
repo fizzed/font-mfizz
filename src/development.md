@@ -35,7 +35,7 @@ Fix any errors shown by `brew doctor`.
 On Debian and Ubuntu, you may need to install the ruby dev packages first
 if not already on your machine:
 
-    sudo apt-get install ruby1.*.*-dev.
+    sudo apt-get install ruby ruby-dev
 
 Then install the fontcustom dependencies:
 
@@ -45,7 +45,9 @@ Then install the fontcustom dependencies:
     cd sfnt2woff
     make
     sudo mv sfnt2woff /usr/local/bin/
-    gem install fontcustom
+    cd ..
+    rm -Rf sfnt2woff woff-code-latest.zip
+    sudo gem install fontcustom
 
 If `ttfautohint` is not available in your distribution,
 Font Custom will still work but your generated font will
