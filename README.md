@@ -13,7 +13,7 @@ and anything that can be done with the power of CSS.
 For documentation and packages to download (rather than use master),
 visit [Fizzed](http://fizzed.com/oss/font-mfizz)
 
-Designed by [Fizz, Inc.](http://fizzed.com/)
+Designed by [Fizzed, Inc.](http://fizzed.com/)
 
 Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
@@ -32,14 +32,14 @@ converted into a web font.
 
 3. [Install the build dependencies](DEVELOPMENT.md) to compile the .svg files into a web font.
 
-4. Add your .svg file to `src/svg`
+4. Add your .svg file to `src/svg`. The file name will become the eventual glyph name (e.g. java.svg
+becomes .icon-java in the css).
 
 5. Run the `src/create-package.sh` shell script
 
 6. Open up `target/preview.html` in your browser to see how it looks
 
 7. Submit a pull request
-
 
 
 
