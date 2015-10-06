@@ -3,6 +3,11 @@ Font Mfizz by Fizzed
 
  - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
 
+#### 2.1 - Not yet released
+
+ - More documentation on adding your own icons
+ - Added icon-gradle
+
 #### 2.0 - 2015-10-05
 
  - Revamped project to let others contribute icons directly

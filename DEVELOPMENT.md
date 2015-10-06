@@ -62,6 +62,26 @@ existing SVG files into your editor (Adobe Illustrator, InkScape), save a
 copy of it with the new name, delete the current artwork, then paste yours in,
 scale to the artboard size.
 
+### Tips for editing in Inkscape
+
+Open the file in Inkscape.  You'll want to start removing / editing paths to
+simplify the source for working in a single color environment.  Here are 
+tips to keep in mind (specifically for Inkscape, but could work in other apps).
+
+- Remove any background layers/paths
+
+- Paths should be fill only, no stroke, and a single color (black is best)
+
+- Edit > XML Editor is your friend.  Some svg files will have too many layers
+you won't see unless you get into the xml itself.  You may want to delete
+many of them.
+
+- File > Document properties > Resize page to content > 
+Resize page to drawing or selection will usually fix the final viewport and
+the size of your generated icon.
+    
+- Save as "Plain SVG"
+
 ## Building the font
 
 Execute this:
