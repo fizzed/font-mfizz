@@ -18,7 +18,7 @@
  */
 
 @font-face {
-  font-family: "FontMfizz";
+  font-family: "font-mfizz";
   src: url("./font-mfizz.eot");
   src: url("./font-mfizz.eot?#iefix") format("embedded-opentype"),
        url("./font-mfizz.woff") format("woff"),
@@ -30,7 +30,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "FontMfizz";
+    font-family: "font-mfizz";
     src: url("./font-mfizz.svg#font-mfizz") format("svg");
   }
 }
@@ -114,6 +114,7 @@
 .icon-php-alt:before,
 .icon-playframework:before,
 .icon-playframework-alt:before,
+.icon-plone:before,
 .icon-postgres:before,
 .icon-postgres-alt:before,
 .icon-python:before,
@@ -139,7 +140,7 @@
 .icon-wireless:before,
 .icon-wordpress:before {
   display: inline-block;
-  font-family: "FontMfizz";
+  font-family: "font-mfizz";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -228,27 +229,28 @@
 .icon-php-alt:before { content: "\f149"; }
 .icon-playframework:before { content: "\f14a"; }
 .icon-playframework-alt:before { content: "\f14b"; }
-.icon-postgres:before { content: "\f14c"; }
-.icon-postgres-alt:before { content: "\f14d"; }
-.icon-python:before { content: "\f14e"; }
-.icon-raspberrypi:before { content: "\f14f"; }
-.icon-redhat:before { content: "\f150"; }
-.icon-redis:before { content: "\f151"; }
-.icon-ruby:before { content: "\f152"; }
-.icon-ruby-on-rails:before { content: "\f153"; }
-.icon-ruby-on-rails-alt:before { content: "\f154"; }
-.icon-satellite:before { content: "\f155"; }
-.icon-scala:before { content: "\f156"; }
-.icon-scala-alt:before { content: "\f157"; }
-.icon-script:before { content: "\f158"; }
-.icon-script-alt:before { content: "\f159"; }
-.icon-shell:before { content: "\f15a"; }
-.icon-solaris:before { content: "\f15b"; }
-.icon-splatter:before { content: "\f15c"; }
-.icon-suse:before { content: "\f15d"; }
-.icon-svg:before { content: "\f15e"; }
-.icon-symfony:before { content: "\f15f"; }
-.icon-tomcat:before { content: "\f160"; }
-.icon-ubuntu:before { content: "\f161"; }
-.icon-wireless:before { content: "\f162"; }
-.icon-wordpress:before { content: "\f163"; }
+.icon-plone:before { content: "\f14c"; }
+.icon-postgres:before { content: "\f14d"; }
+.icon-postgres-alt:before { content: "\f14e"; }
+.icon-python:before { content: "\f14f"; }
+.icon-raspberrypi:before { content: "\f150"; }
+.icon-redhat:before { content: "\f151"; }
+.icon-redis:before { content: "\f152"; }
+.icon-ruby:before { content: "\f153"; }
+.icon-ruby-on-rails:before { content: "\f154"; }
+.icon-ruby-on-rails-alt:before { content: "\f155"; }
+.icon-satellite:before { content: "\f156"; }
+.icon-scala:before { content: "\f157"; }
+.icon-scala-alt:before { content: "\f158"; }
+.icon-script:before { content: "\f159"; }
+.icon-script-alt:before { content: "\f15a"; }
+.icon-shell:before { content: "\f15b"; }
+.icon-solaris:before { content: "\f15c"; }
+.icon-splatter:before { content: "\f15d"; }
+.icon-suse:before { content: "\f15e"; }
+.icon-svg:before { content: "\f15f"; }
+.icon-symfony:before { content: "\f160"; }
+.icon-tomcat:before { content: "\f161"; }
+.icon-ubuntu:before { content: "\f162"; }
+.icon-wireless:before { content: "\f163"; }
+.icon-wordpress:before { content: "\f164"; }
