@@ -6,8 +6,9 @@ version of FontCustom installed.
 
 ## What you need
 
-* Ruby 1.9.x or greater
-* FontCustom 1.3.8 or greater
+ - Java 8
+ - Ruby 1.9.x or greater
+ - FontCustom 1.3.8 or greater
 
 ## Install
 
@@ -84,14 +85,14 @@ the size of your generated icon.
 
 ## Building the font
 
-Execute this:
+In your shell
 
-    src/create-package.sh
+    java -jar blaze.jar
 
 This will re-generate the font directory in the root of the repo.  Browse a 
 preview of your new font by opening this in your browser
 
-    target/preview.html
+    target/build/preview.html
 
 ## Build issues
 
@@ -120,10 +121,6 @@ environment.
 
 ## Notes
 
-`src/create-package.sh` will compile the font into `font-mfizz`
-
-There is a `preview.html` file in there which will display how the icons render.
-
 You may need to tweak your source `.svg` files quite a bit to get fontcustom to correctly produce a font.
 
 For example, you may need to tweak the xml of the `.svg` to limit how its painted, named, etc.
@@ -132,3 +129,4 @@ Every other `.svg` file in this package is an example of ones that work.
 
 If you are having issues compiling a font, you may need to tweak the
 SVG to get rid of any advanced formatting, etc. to get it to compile.
+

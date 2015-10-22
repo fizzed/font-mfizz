@@ -8,7 +8,7 @@
   "devDependencies": {},
   "license": "MIT",
   "main": [
-    "./target/font-mfizz.*"
+    "./dist/font-mfizz.*"
   ],
   "ignore": [
     "*/.*",

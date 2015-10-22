@@ -34,9 +34,9 @@ converted into a web font.
 4. Add your .svg file to `src/svg`. The file name will become the eventual glyph name (e.g. java.svg
 becomes .icon-java in the css).
 
-5. Run the `src/create-package.sh` shell script
+5. In your shell run `java -jar blaze.jar`
 
-6. Open up `target/preview.html` in your browser to see how it looks
+6. Open up `target/build/preview.html` in your browser
 
 7. Submit a pull request and just include the src/svg file(s)
 
