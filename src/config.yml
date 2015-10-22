@@ -14,7 +14,7 @@
 #
 # default: INPUT/fontcustom
 
-#output: path/to/output
+output: target/build
 
 # ---------------------------------------------------------------------------- #
 # Templates
