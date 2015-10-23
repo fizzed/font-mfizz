@@ -87,3 +87,30 @@ def dist() {
     exec("rm", "-Rf", distDir).run()
     exec("cp", "-Rf", buildDir, distDir).run()
 }
+
+def release() {
+    // confirm we are not a snapshot
+    if (version.endsWith("-SNAPSHOT")) {
+        fail("Version ${version} is a snapshot (change blaze.conf then re-run)")
+    }
+    
+    // confirm release notes contains version
+    foundVersion =
+        Unix4j
+            .fromFile(withBaseDir("RELEASE-NOTES.md"))
+            .grep("^#### " + version + " - \\d{4}-\\d{2}-\\d{2}\$")
+            .toStringResult()
+            
+    if (foundVersion == null || foundVersion.equals("")) {
+        fail("Version ${version} not present in RELEASE-NOTES.md")
+    }
+    
+    compile()
+    dist()
+    
+    // git commit & tag
+    exec("git", "commit", "-am", "Preparing for release v" + version).run()
+    exec("git", "tag", "v" + version).run()
+    
+    log.info("Tagged with git. Please run 'git push -u origin' now.")
+}
