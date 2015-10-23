@@ -4,6 +4,14 @@ import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
 import java.time.LocalDate
+// for embedded undertow
+import io.undertow.Undertow
+import io.undertow.server.HttpHandler
+import io.undertow.server.HttpServerExchange
+import io.undertow.util.Headers
+import io.undertow.server.handlers.resource.PathResourceManager
+import java.nio.file.Paths
+import static io.undertow.Handlers.resource
 
 // required executables
 requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
@@ -18,9 +26,9 @@ fontcustomConfigFile = withBaseDir("src/config.yml")
 svgDir = withBaseDir("src/svg")
 year = LocalDate.now().getYear();
 
-log.info("Building {} version {}", name, version)
-log.info("Build to {}", buildDir)
-log.info("Dist to {}", distDir)
+log.info("Will create {} version {}", name, version)
+log.info("Will build to {}", buildDir)
+log.info("Will dist to {}", distDir)
 
 def clean() {
     log.info("Deleting dir {}", buildDir)
@@ -78,6 +86,23 @@ def compile() {
     oldPreviewFile.renameTo(newPreviewFile)
     
     log.info("Visit file://{}", newPreviewFile.getCanonicalPath())
+}
+
+def server() {
+    def undertow = Undertow.builder()
+        .addHttpListener(8080, "localhost")
+        .setHandler(resource(new PathResourceManager(buildDir.toPath(), 100))
+            .setDirectoryListingEnabled(true))
+        .build()
+       
+    undertow.start()
+    
+    log.info("Open browser to http://localhost:8080/preview.html")
+    
+    // hack for waiting on undertow (wish it could be joined)
+    synchronized (undertow) {
+        undertow.wait();
+    }
 }
 
 def dist() {

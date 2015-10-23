@@ -34,11 +34,11 @@ converted into a web font.
 4. Add your .svg file to `src/svg`. The file name will become the eventual glyph name (e.g. java.svg
 becomes .icon-java in the css).
 
-5. In your shell run `java -jar blaze.jar`
+5. In your shell run `java -jar blaze.jar compile server`
 
-6. Open up `target/build/preview.html` in your browser
+6. Visit `http://localhost:8080/preview.html` in your browser
 
-7. Submit a pull request and just include the src/svg file(s)
+7. Submit a pull request. Do NOT include any files from `dist`.
 
 
 
