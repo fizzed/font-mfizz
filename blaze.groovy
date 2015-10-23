@@ -1,4 +1,4 @@
-import static com.fizzed.blaze.Shells.*
+import static com.fizzed.blaze.Systems.*
 import static com.fizzed.blaze.Contexts.*
 import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
@@ -32,15 +32,15 @@ log.info("Will dist to {}", distDir)
 
 def clean() {
     log.info("Deleting dir {}", buildDir)
-    exec("rm", "-Rf", buildDir).run()
-    exec("rm", "-Rf", context.withBaseDir(".fontcustom-manifest.json")).run()
+    remove(buildDir).recursive().force().run()
+    remove(withBaseDir(".fontcustom-manifest.json")).recursive().force().run()
 }
 
 def font_compile() {
     clean()
 
     // verify fontcustom version
-    fontcustomVersion = exec("fontcustom", "-v").readOutput().run().output().trim()
+    fontcustomVersion = exec("fontcustom", "-v").captureOutput().run().output().trim()
     
     if (!fontcustomVersion.contains("1.3.8")) {
         log.warn("Detected {}! This script only confirmed to work with 1.3.8", fontcustomVersion)
@@ -78,7 +78,7 @@ def compile() {
         .toFile(cssFile)
         
     // delete the temp new file
-    newCssFile.delete()
+    remove(newCssFile).run()
     
     oldPreviewFile = new File(buildDir, "font-mfizz-preview.html")
     newPreviewFile = new File(buildDir, "preview.html")
@@ -109,7 +109,7 @@ def dist() {
     log.warn("DO NOT SUBMIT PULL REQUESTS THAT INCLUDE THE 'dist' DIR!!")
     
     log.info("Copying build {} to dist {}", buildDir, distDir)
-    exec("rm", "-Rf", distDir).run()
+    remove(distDir).recursive().force().run()
     exec("cp", "-Rf", buildDir, distDir).run()
 }
 
