@@ -89,10 +89,18 @@ In your shell
 
     java -jar blaze.jar
 
-This will re-generate the font directory in the root of the repo.  Browse a 
+This will re-generate the font build directory in the repo.  Browse a 
 preview of your new font by opening this in your browser
 
-    target/build/preview.html
+    build/preview.html
+
+You can view the file using an embedded webserver
+
+    java -jar blaze.jar compile server
+
+In your browser
+
+    http://localhost:8080/preview.html
 
 ## Build issues
 
