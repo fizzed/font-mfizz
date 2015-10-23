@@ -3,10 +3,17 @@ Font Mfizz by Fizzed
 
  - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
 
-#### 2.1 - 2015-10-22
+#### 2.1 - 2015-10-23
 
  - More documentation on adding your own icons
+ - Revamped build process with [Blaze](https://github.com/fizzed/blaze)
  - Added icon-gradle
+ - Added icon-exherbo
+ - Added icon-maven
+ - Added icon-plone
+ - Added icon-archlinux
+ - Added icon-gentoo
+ - Added icon-docker
 
 #### 2.0 - 2015-10-05
 
