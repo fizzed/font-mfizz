@@ -1,7 +1,9 @@
 import static com.fizzed.blaze.Shells.*
+import static com.fizzed.blaze.Contexts.*
 import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
+import java.time.LocalDate
 
 // required executables
 requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
@@ -9,21 +11,20 @@ requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/maste
 // configuration
 name = config.getString("font.name")
 version = config.getString("font.version")
-targetDir = context.withBaseDir(config.getString("font.target.dir"))
-buildDir = context.withBaseDir(config.getString("font.build.dir"))
-distDir = context.withBaseDir(config.getString("font.dist.dir"))
-srcDir = context.withBaseDir("src")
-fontcustomConfigFile = context.withBaseDir("src/config.yml")
-svgDir = context.withBaseDir("src/svg")
-year = Calendar.getInstance().get(Calendar.YEAR);
+buildDir = withBaseDir(config.getString("font.build.dir"))
+distDir = withBaseDir(config.getString("font.dist.dir"))
+srcDir = withBaseDir("src")
+fontcustomConfigFile = withBaseDir("src/config.yml")
+svgDir = withBaseDir("src/svg")
+year = LocalDate.now().getYear();
 
 log.info("Building {} version {}", name, version)
 log.info("Build to {}", buildDir)
 log.info("Dist to {}", distDir)
 
 def clean() {
-    log.info("Deleting dir {}", targetDir)
-    exec("rm", "-Rf", targetDir).run()
+    log.info("Deleting dir {}", buildDir)
+    exec("rm", "-Rf", buildDir).run()
     exec("rm", "-Rf", context.withBaseDir(".fontcustom-manifest.json")).run()
 }
 
@@ -33,7 +34,7 @@ def font_compile() {
     // verify fontcustom version
     fontcustomVersion = exec("fontcustom", "-v").readOutput().run().output().trim()
     
-    if (!fontcustomVersion.contains("1.3.9")) {
+    if (!fontcustomVersion.contains("1.3.8")) {
         log.warn("Detected {}! This script only confirmed to work with 1.3.8", fontcustomVersion)
     }
     
@@ -42,7 +43,7 @@ def font_compile() {
     
     // move the .fontcustom-manifest.json to the right spot
     jsonManifestFile = context.withBaseDir('.fontcustom-manifest.json')
-    newJsonManifestFile = new File(targetDir, jsonManifestFile.getName())
+    newJsonManifestFile = new File(buildDir, jsonManifestFile.getName())
     jsonManifestFile.renameTo(newJsonManifestFile)
 }
 
@@ -67,6 +68,9 @@ def compile() {
         .sed('s/\\$\\{YEAR\\}/' + year + '/')
         .sed('s/"font-mfizz"/"FontMfizz"/')
         .toFile(cssFile)
+        
+    // delete the temp new file
+    newCssFile.delete()
     
     oldPreviewFile = new File(buildDir, "font-mfizz-preview.html")
     newPreviewFile = new File(buildDir, "preview.html")
@@ -74,4 +78,12 @@ def compile() {
     oldPreviewFile.renameTo(newPreviewFile)
     
     log.info("Visit file://{}", newPreviewFile.getCanonicalPath())
+}
+
+def dist() {
+    log.warn("DO NOT SUBMIT PULL REQUESTS THAT INCLUDE THE 'dist' DIR!!")
+    
+    log.info("Copying build {} to dist {}", buildDir, distDir)
+    exec("rm", "-Rf", distDir).run()
+    exec("cp", "-Rf", buildDir, distDir).run()
 }
