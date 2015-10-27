@@ -1,8 +1,10 @@
+import com.fizzed.blaze.Contexts
+import static com.fizzed.blaze.Contexts.withBaseDir
 import static com.fizzed.blaze.Systems.*
-import static com.fizzed.blaze.Contexts.*
 import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
+import java.nio.file.Files
 import java.time.LocalDate
 // for embedded undertow
 import io.undertow.Undertow
@@ -17,10 +19,13 @@ import static io.undertow.Handlers.resource
 requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
 
 // configuration
-name = config.getString("font.name")
-version = config.getString("font.version")
-buildDir = withBaseDir(config.getString("font.build.dir"))
-distDir = withBaseDir(config.getString("font.dist.dir"))
+context = Contexts.currentContext()
+config = context.config()
+log = context.logger()
+name = config.find("font.name").get()
+version = config.find("font.version").get()
+buildDir = withBaseDir(config.find("font.build.dir").get())
+distDir = withBaseDir(config.find("font.dist.dir").get())
 srcDir = withBaseDir("src")
 fontcustomConfigFile = withBaseDir("src/config.yml")
 svgDir = withBaseDir("src/svg")
@@ -51,8 +56,8 @@ def font_compile() {
     
     // move the .fontcustom-manifest.json to the right spot
     jsonManifestFile = context.withBaseDir('.fontcustom-manifest.json')
-    newJsonManifestFile = new File(buildDir, jsonManifestFile.getName())
-    jsonManifestFile.renameTo(newJsonManifestFile)
+    newJsonManifestFile = buildDir.resolve(jsonManifestFile.getFileName())
+    Files.move(jsonManifestFile, newJsonManifestFile)
 }
 
 def compile() {
@@ -60,38 +65,38 @@ def compile() {
     
     log.info("Creating improved stylesheet...")
     
-    headerFile = new File(srcDir, "header.txt")
-    cssFile = new File(buildDir, "font-mfizz.css")
-    newCssFile = new File(buildDir, "font-mfizz.new.css")
+    headerFile = srcDir.resolve("header.txt")
+    cssFile = buildDir.resolve("font-mfizz.css")
+    newCssFile = buildDir.resolve("font-mfizz.new.css")
     
     // stip first 4 lines of css to new css
     Unix4j
-        .tail(Tail.Options.s, 4, cssFile)
-        .toFile(newCssFile)
+        .tail(Tail.Options.s, 4, cssFile.toFile())
+        .toFile(newCssFile.toFile())
     
     // cat header and new css to old css
     Unix4j
-        .cat(headerFile, newCssFile)
+        .cat(headerFile.toFile(), newCssFile.toFile())
         .sed('s/\\$\\{VERSION\\}/' + version + '/')
         .sed('s/\\$\\{YEAR\\}/' + year + '/')
         .sed('s/"font-mfizz"/"FontMfizz"/')
-        .toFile(cssFile)
+        .toFile(cssFile.toFile())
         
     // delete the temp new file
     remove(newCssFile).run()
     
-    oldPreviewFile = new File(buildDir, "font-mfizz-preview.html")
-    newPreviewFile = new File(buildDir, "preview.html")
+    oldPreviewFile = buildDir.resolve("font-mfizz-preview.html")
+    newPreviewFile = buildDir.resolve("preview.html")
     
-    oldPreviewFile.renameTo(newPreviewFile)
+    Files.move(oldPreviewFile, newPreviewFile)
     
-    log.info("Visit file://{}", newPreviewFile.getCanonicalPath())
+    log.info("Visit file://{}", newPreviewFile.normalize())
 }
 
 def server() {
     def undertow = Undertow.builder()
         .addHttpListener(8080, "localhost")
-        .setHandler(resource(new PathResourceManager(buildDir.toPath(), 100))
+        .setHandler(resource(new PathResourceManager(buildDir, 100))
             .setDirectoryListingEnabled(true))
         .build()
        
