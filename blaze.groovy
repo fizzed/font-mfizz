@@ -1,10 +1,12 @@
 import com.fizzed.blaze.Contexts
-import static com.fizzed.blaze.Contexts.withBaseDir
+import static com.fizzed.blaze.Contexts.*
 import static com.fizzed.blaze.Systems.*
+import static com.fizzed.blaze.util.Globber.globber
 import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
 import java.nio.file.Files
+import org.apache.commons.io.FileUtils
 import java.time.LocalDate
 // for embedded undertow
 import io.undertow.Undertow
@@ -19,16 +21,15 @@ import static io.undertow.Handlers.resource
 requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
 
 // configuration
-context = Contexts.currentContext()
-config = context.config()
-log = context.logger()
-name = config.find("font.name").get()
-version = config.find("font.version").get()
-buildDir = withBaseDir(config.find("font.build.dir").get())
-distDir = withBaseDir(config.find("font.dist.dir").get())
+config = Contexts.config()
+log = Contexts.logger()
+name = config.value("font.name").get()
+version = config.value("font.version").get()
+buildDir = withBaseDir(config.value("font.build.dir").get())
+distDir = withBaseDir(config.value("font.dist.dir").get())
 srcDir = withBaseDir("src")
-fontcustomConfigFile = withBaseDir("src/config.yml")
-svgDir = withBaseDir("src/svg")
+fontcustomConfigFile = srcDir.resolve("config.yml")
+svgDir = srcDir.resolve("svg")
 year = LocalDate.now().getYear();
 
 log.info("Will create {} version {}", name, version)
@@ -55,7 +56,7 @@ def font_compile() {
     exec("fontcustom", "compile", "--config=" + fontcustomConfigFile, svgDir).run()
     
     // move the .fontcustom-manifest.json to the right spot
-    jsonManifestFile = context.withBaseDir('.fontcustom-manifest.json')
+    jsonManifestFile = withBaseDir('.fontcustom-manifest.json')
     newJsonManifestFile = buildDir.resolve(jsonManifestFile.getFileName())
     Files.move(jsonManifestFile, newJsonManifestFile)
 }
@@ -115,10 +116,14 @@ def dist() {
     
     log.info("Copying build {} to dist {}", buildDir, distDir)
     remove(distDir).recursive().force().run()
-    exec("cp", "-Rf", buildDir, distDir).run()
+    FileUtils.copyDirectory(buildDir.toFile(), distDir.toFile())
+
+    remove(globber(distDir, ".fontcustom-manifest.json")).run()
 }
 
 def release() {
+    requireExec("git").run()
+
     // confirm we are not a snapshot
     if (version.endsWith("-SNAPSHOT")) {
         fail("Version ${version} is a snapshot (change blaze.conf then re-run)")
