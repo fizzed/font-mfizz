@@ -23,6 +23,8 @@ import org.apache.http.entity.ContentType
 import org.apache.http.client.fluent.Request
 // for json
 import com.jayway.jsonpath.JsonPath
+// for versioning
+import com.github.zafarkhaja.semver.Version
 // for embedded undertow
 import io.undertow.Undertow
 import io.undertow.server.HttpHandler
@@ -185,6 +187,31 @@ def release() {
     exec("git", "push", "--tags", "origin").run()
     
     publish_github()
+    
+    bump_version()
+    
+    exec("git", "commit", "-am", "Preparing for next development iteration").run()
+    exec("git", "push", "-u", "origin", "master").run()
+}
+
+def bump_version() {
+    semver = Version.valueOf(version + ".0")
+    semver = semver.incrementMinorVersion()
+    newver = semver.toString()
+    newver = newver.substring(0, newver.length()-2) + "-SNAPSHOT"
+    log.info("New version {}", newver)
+    
+    // update blaze.conf with new version
+    configFile = withBaseDir("blaze.conf")
+    newConfigFile = withBaseDir("blaze.conf.new")
+    
+    Unix4j
+        .cat(configFile.toFile())
+        .sed('s/"' + version + '"/"' + newver + '"/')
+        .toFile(newConfigFile.toFile())
+    
+    Files.delete(configFile)
+    Files.move(newConfigFile, configFile)
 }
 
 def publish_github() {
