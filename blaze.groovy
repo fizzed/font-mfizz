@@ -1,3 +1,4 @@
+
 import com.fizzed.blaze.Contexts
 import static com.fizzed.blaze.Contexts.*
 import static com.fizzed.blaze.Systems.*
@@ -6,8 +7,22 @@ import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
 import java.nio.file.Files
-import org.apache.commons.io.FileUtils
 import java.time.LocalDate
+// unix4j
+import org.unix4j.Unix4j
+import org.unix4j.unix.Tail
+// extra file utils
+import org.apache.commons.io.FileUtils
+// for zipping
+import org.zeroturnaround.zip.ZipUtil
+import org.zeroturnaround.zip.NameMapper
+// for http
+import org.apache.http.HttpVersion
+import org.apache.http.client.HttpResponseException
+import org.apache.http.entity.ContentType
+import org.apache.http.client.fluent.Request
+// for json
+import com.jayway.jsonpath.JsonPath
 // for embedded undertow
 import io.undertow.Undertow
 import io.undertow.server.HttpHandler
@@ -21,16 +36,20 @@ import static io.undertow.Handlers.resource
 requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
 
 // configuration
-config = Contexts.config()
-log = Contexts.logger()
+context = Contexts.currentContext()
+config = context.config()
+log = context.logger()
 name = config.value("font.name").get()
 version = config.value("font.version").get()
+finalName = name + "-" + version
 buildDir = withBaseDir(config.value("font.build.dir").get())
+fontBuildDir = buildDir.resolve("font")
 distDir = withBaseDir(config.value("font.dist.dir").get())
 srcDir = withBaseDir("src")
 fontcustomConfigFile = srcDir.resolve("config.yml")
 svgDir = srcDir.resolve("svg")
-year = LocalDate.now().getYear();
+finalZipFile = buildDir.resolve(finalName + ".zip")
+year = LocalDate.now().getYear()
 
 log.info("Will create {} version {}", name, version)
 log.info("Will build to {}", buildDir)
@@ -57,7 +76,7 @@ def font_compile() {
     
     // move the .fontcustom-manifest.json to the right spot
     jsonManifestFile = withBaseDir('.fontcustom-manifest.json')
-    newJsonManifestFile = buildDir.resolve(jsonManifestFile.getFileName())
+    newJsonManifestFile = fontBuildDir.resolve(jsonManifestFile.getFileName())
     Files.move(jsonManifestFile, newJsonManifestFile)
 }
 
@@ -67,8 +86,8 @@ def compile() {
     log.info("Creating improved stylesheet...")
     
     headerFile = srcDir.resolve("header.txt")
-    cssFile = buildDir.resolve("font-mfizz.css")
-    newCssFile = buildDir.resolve("font-mfizz.new.css")
+    cssFile = fontBuildDir.resolve("font-mfizz.css")
+    newCssFile = fontBuildDir.resolve("font-mfizz.new.css")
     
     // stip first 4 lines of css to new css
     Unix4j
@@ -86,8 +105,8 @@ def compile() {
     // delete the temp new file
     remove(newCssFile).run()
     
-    oldPreviewFile = buildDir.resolve("font-mfizz-preview.html")
-    newPreviewFile = buildDir.resolve("preview.html")
+    oldPreviewFile = fontBuildDir.resolve("font-mfizz-preview.html")
+    newPreviewFile = fontBuildDir.resolve("preview.html")
     
     Files.move(oldPreviewFile, newPreviewFile)
     
@@ -97,7 +116,7 @@ def compile() {
 def server() {
     def undertow = Undertow.builder()
         .addHttpListener(8080, "localhost")
-        .setHandler(resource(new PathResourceManager(buildDir, 100))
+        .setHandler(resource(new PathResourceManager(fontBuildDir, 100))
             .setDirectoryListingEnabled(true))
         .build()
        
@@ -107,18 +126,26 @@ def server() {
     
     // hack for waiting on undertow (wish it could be joined)
     synchronized (undertow) {
-        undertow.wait();
+        undertow.wait()
     }
 }
 
 def dist() {
     log.warn("DO NOT SUBMIT PULL REQUESTS THAT INCLUDE THE 'dist' DIR!!")
     
-    log.info("Copying build {} to dist {}", buildDir, distDir)
+    log.info("Copying build {} to dist {}", fontBuildDir, distDir)
     remove(distDir).recursive().force().run()
-    FileUtils.copyDirectory(buildDir.toFile(), distDir.toFile())
 
+    FileUtils.copyDirectory(fontBuildDir.toFile(), distDir.toFile())
+
+    log.info("Removing unnecessary manifest file");
     remove(globber(distDir, ".fontcustom-manifest.json")).run()
+
+    ZipUtil.pack(distDir.toFile(), finalZipFile.toFile(), new NameMapper() {
+        public String map(String name) {
+            return finalName + "/" + name;
+        }
+    })
 }
 
 def release() {
@@ -132,7 +159,7 @@ def release() {
     // confirm release notes contains version
     foundVersion =
         Unix4j
-            .fromFile(withBaseDir("RELEASE-NOTES.md"))
+            .fromFile(withBaseDir("RELEASE-NOTES.md").toFile())
             .grep("^#### " + version + " - \\d{4}-\\d{2}-\\d{2}\$")
             .toStringResult()
             
@@ -140,12 +167,91 @@ def release() {
         fail("Version ${version} not present in RELEASE-NOTES.md")
     }
     
+    // any unstaged files in git (0=no changes, 1=differences)
+    exec("git", "diff-files", "--quiet").run()
+
     compile()
     dist()
     
+/**
     // git commit & tag
     exec("git", "commit", "-am", "Preparing for release v" + version).run()
     exec("git", "tag", "v" + version).run()
+    exec("git", "push", "-u", "origin", "master").run()
+    exec("git", "push", "--tags", "origin").run()
+*/
+}
+
+def publish_github() {
+    // zip file must exist
+    if (Files.notExists(finalZipFile)) {
+        fail("Final zip " + finalZipFile + " must exist!")
+    }
     
-    log.info("Tagged with git. Please run 'git push -u origin' now.")
+    // github token
+    githubToken = config.value("github.token").getOrNull()
+    
+    if (githubToken == null) {
+        // prompt for github token to use for pushing release
+        githubToken = Contexts.prompt("github token (for pushing release): ")
+        
+        if (githubToken == null) {
+            fail("github token required")
+        }
+    }
+
+    json = null
+    
+    try {
+         log.info("Trying to create new github release...")
+        
+        // try to create release
+        json =
+            Request.Post("https://api.github.com/repos/fizzed/font-mfizz/releases")
+                .version(HttpVersion.HTTP_1_1)
+                .addHeader("Authorization", "token " + githubToken)
+                .addHeader("Accept", "application/json")
+                .bodyString("{ \"tag_name\" : \"v" + version + "\" }", ContentType.create("application/json"))
+                .execute()
+                .returnContent()
+                .asString();
+                
+        log.info("Created new github release!")
+    } catch (HttpResponseException e) {
+        if (e.getStatusCode() == 422) {
+            log.info("Github release already exists, querying for it...")
+            
+            // query for existing release
+            json =
+                Request.Get("https://api.github.com/repos/fizzed/font-mfizz/releases/tags/v" + version)
+                    .version(HttpVersion.HTTP_1_1)
+                    .addHeader("Authorization", "token " + githubToken)
+                    .addHeader("Accept", "application/json")
+                    .execute()
+                    .returnContent()
+                    .asString()
+                    
+            log.info("Found github release!")
+        }
+    }
+    
+    // get the assets url
+    uploadUrlTemplate = JsonPath.read(json, '$.upload_url')
+    
+    // strip template at end
+    uploadUrl = uploadUrlTemplate.substring(0, uploadUrlTemplate.indexOf("{"))
+    
+    log.info("Using upload_url {}", uploadUrl)
+    
+    json =
+        Request.Post(uploadUrl + "?name=" + finalZipFile.getFileName())
+	     .version(HttpVersion.HTTP_1_1)
+	     .useExpectContinue()
+             .addHeader("Authorization", "token " + githubToken)
+     	     .bodyFile(finalZipFile.toFile(), ContentType.create("application/zip"))
+	     .execute()
+	     .returnContent()
+	     .asString();
+    
+    log.info("Published {} to github!", finalZipFile)
 }
