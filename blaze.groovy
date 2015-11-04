@@ -167,19 +167,24 @@ def release() {
         fail("Version ${version} not present in RELEASE-NOTES.md")
     }
     
-    // any unstaged files in git (0=no changes, 1=differences)
-    exec("git", "diff-files", "--quiet").run()
+    // any unstaged files in git? (0 = no changes, 1 = changes exist)
+    result =
+        exec("git", "diff-files", "--quiet").exitValues(0, 1).run()
+        
+    if (result.exitValue() == 1) {
+        fail("Uncommitted changes in git. Commit them first then re-run this task")
+    }
 
     compile()
     dist()
     
-/**
     // git commit & tag
     exec("git", "commit", "-am", "Preparing for release v" + version).run()
     exec("git", "tag", "v" + version).run()
     exec("git", "push", "-u", "origin", "master").run()
     exec("git", "push", "--tags", "origin").run()
-*/
+    
+    publish_github()
 }
 
 def publish_github() {
