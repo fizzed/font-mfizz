@@ -16,6 +16,10 @@ Designed by [Fizzed, Inc.](http://fizzed.com/)
 
 Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
+## Releases
+
+[Download packages](releases)
+
 ## Can I get an icon added?
 
 Do you want a new icon added?  Since this font is a hobby, the fastest way to get a new
