@@ -3,6 +3,10 @@ Font Mfizz by Fizzed
 
  - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
 
+#### 2.2 - 2015-11-04
+
+ - Improved build process (no new icons)
+
 #### 2.1 - 2015-10-23
 
  - More documentation on adding your own icons
