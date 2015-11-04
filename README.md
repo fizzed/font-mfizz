@@ -18,7 +18,7 @@ Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
 ## Releases
 
-[Download packages](releases)
+[Download packages](https://github.com/fizzed/font-mfizz/releases)
 
 ## Can I get an icon added?
 
