@@ -7,6 +7,7 @@ import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
 import java.nio.file.Files
+import java.nio.file.Path
 import java.time.LocalDate
 // unix4j
 import org.unix4j.Unix4j
