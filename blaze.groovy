@@ -1,3 +1,4 @@
+#!/usr/bin/env blaze
 
 import com.fizzed.blaze.Contexts
 import static com.fizzed.blaze.Contexts.*
