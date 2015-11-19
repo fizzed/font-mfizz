@@ -4,6 +4,7 @@ import com.fizzed.blaze.Contexts
 import static com.fizzed.blaze.Contexts.*
 import static com.fizzed.blaze.Systems.*
 import static com.fizzed.blaze.util.Globber.globber
+import com.fizzed.blaze.util.Streamables
 import org.unix4j.Unix4j
 import org.unix4j.unix.Tail
 import java.io.File
@@ -69,7 +70,9 @@ def font_compile() {
     clean()
 
     // verify fontcustom version
-    fontcustomVersion = exec("fontcustom", "-v").captureOutput().run().output().trim()
+    capture = Streamables.captureOutput()
+    exec("fontcustom", "-v").pipeOutput(capture).run()
+    fontcustomVersion = capture.toString().trim()
     
     if (!fontcustomVersion.contains("1.3.8")) {
         log.warn("Detected {}! This script only confirmed to work with 1.3.8", fontcustomVersion)
