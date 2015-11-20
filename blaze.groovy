@@ -175,10 +175,10 @@ def release() {
     }
     
     // any unstaged files in git? (0 = no changes, 1 = changes exist)
-    result =
+    exitValue =
         exec("git", "diff-files", "--quiet").exitValues(0, 1).run()
         
-    if (result.exitValue() == 1) {
+    if (exitValue == 1) {
         fail("Uncommitted changes in git. Commit them first then re-run this task")
     }
 
