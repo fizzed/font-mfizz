@@ -1,9 +1,11 @@
 # Development process
 
-How to to compile and create font packages.  [FontCustom](https://github.com/FontCustom/fontcustom)
-essentially does all the heavy lifting.  This build process is heavily dependent on the underlying
-version of FontCustom installed.
+Building font-mfizz relies on many system-level dependencies.  This guide is
+the nitty gritty details.  As of March 2016, there is a [Vagrant](https://www.vagrantup.com/)
+bootstrapping process to setup the *exact* system required to compile your font.
 
+Its **highly** recommended you simply use the Vagrant-method.  This guide is
+included mostly for the maintainers of font-mfizz.
 ## What you need
 
  - Java 8
@@ -44,12 +46,12 @@ Then install the fontcustom dependencies:
 
     sudo apt-get install fontforge ttfautohint
     wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
-    unzip woff-code-latest.zip -d sfnt2woff
-    cd sfnt2woff
+    unzip -d woff woff-code-latest.zip
+    cd woff
     make
     sudo mv sfnt2woff /usr/local/bin/
     cd ..
-    rm -Rf sfnt2woff woff-code-latest.zip
+    rm -Rf woff woff-code-latest.zip
     sudo gem install fontcustom
 
 If `ttfautohint` is not available in your distribution,

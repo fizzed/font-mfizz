@@ -3,3 +3,4 @@ build.xml
 build
 nbproject
 /nbproject/private/
+.vagrant

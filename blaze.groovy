@@ -200,10 +200,10 @@ def release() {
 }
 
 def bump_version() {
-    semver = Version.valueOf(version + ".0")
+    semver = Version.valueOf(version)
     semver = semver.incrementMinorVersion()
     newver = semver.toString()
-    newver = newver.substring(0, newver.length()-2) + "-SNAPSHOT"
+    newver = newver + "-SNAPSHOT"
     log.info("New version {}", newver)
     
     // update blaze.conf with new version

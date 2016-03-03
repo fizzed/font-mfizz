@@ -24,11 +24,30 @@ Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
 [cdnjs](https://cdnjs.com) now hosts font-mfizz for use by all. Visit [https://cdnjs.com/libraries/font-mfizz](https://cdnjs.com/libraries/font-mfizz) for more info.
 
-## Can I get an icon added?
+## Development
 
-Do you want a new icon added?  Since this font is a hobby, the fastest way to get a new
-one added is to add it yourself.  We're happy to accept pull requests and periodically publish
-new builds.  Here are the steps to get an icon officially added:
+Building font-mfizz relies on many system-level dependencies.  Rather than you
+trying to setup the environment yourself, we have switched to using
+[Vagrant](https://www.vagrantup.com/) to help automate the setup of a development environment.
+What's great is that even if you're on Linux, Windows, or Mac, you'll get the exact
+environment the font-mfizz maintainers use to build the font.
+
+ * Install [Vagrant](https://www.vagrantup.com/)
+ * Run `vagrant up`
+ * Sit back, get a coffee...
+ * Run `vagrant ssh`
+ * You're now ssh'ed into your font-mfizz virtual dev machine
+ * `cd /vagrant`
+ * `java -jar blaze.jar`
+ * On your actual real machine, open up `build/font/preview.html` in your browser
+
+## Can I add an icon?
+
+Short answer, yes!
+
+Since this font is a hobby, the fastest way to get a new one added is to add it
+yourself.  We're happy to accept pull requests and periodically publish new builds. 
+Here are the steps to get an icon officially added:
 
 1. Does the icon fit within the theme of this font?  Does it represent a programming language,
 operating system, or software engineering?
@@ -37,16 +56,12 @@ operating system, or software engineering?
 Please note that you may need to tweak and simplify your .svg file for it to be properly
 converted into a web font.
 
-3. [Install the build dependencies](DEVELOPMENT.md) to compile the .svg files into a web font.
+3. Follow the steps above to setup your development environment.
 
 4. Add your .svg file to `src/svg`. The file name will become the eventual glyph name (e.g. java.svg
 becomes .icon-java in the css).
 
-5. In your shell run `java -jar blaze.jar compile server`
-
-6. Visit `http://localhost:8080/preview.html` in your browser
-
-7. Submit a pull request. Do NOT include any files from `dist`.
+5. Submit a pull request.
 
 ## License
 

@@ -3,6 +3,15 @@ Font Mfizz by Fizzed
 
  - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
 
+#### 2.3.0 - 2016-03-01
+ 
+ - Vagrant now used to automate setup of precise dev environment
+ - cdnjs now hosting font-mfizz!
+ - Added icon-angular
+ - Added icon-grunt
+ - Added icon-git
+ - Added icon-spring
+
 #### 2.2 - 2015-11-04
 
  - Improved build process (no new icons)
