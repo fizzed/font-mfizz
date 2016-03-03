@@ -56,10 +56,11 @@ operating system, or software engineering?
 Please note that you may need to tweak and simplify your .svg file for it to be properly
 converted into a web font.
 
-3. Follow the steps above to setup your development environment.
-
-4. Add your .svg file to `src/svg`. The file name will become the eventual glyph name (e.g. java.svg
+3. Add your .svg file to `src/svg`. The file name will become the eventual glyph name (e.g. java.svg
 becomes .icon-java in the css).
+
+4. Follow the steps above to setup your development environment.  Compile the font with your
+   new icon(s).  Verify they look good in a browser.  Sometimes they need tweaking.
 
 5. Submit a pull request.
 
