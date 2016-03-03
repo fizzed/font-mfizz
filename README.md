@@ -47,3 +47,12 @@ becomes .icon-java in the css).
 6. Visit `http://localhost:8080/preview.html` in your browser
 
 7. Submit a pull request. Do NOT include any files from `dist`.
+
+## License
+
+This project is licensed under the MIT License and © 2013-2016 Fizzed, Inc. You can find a copy of
+all of the licenses in the projects LICENSE.txt file.
+
+All icons representing commercial companies are trademarks of their respective owners. The use of
+these trademarks does not indicate endorsement of the trademark holder by Fizzed, Font Mfizz, nor
+vice versa.
