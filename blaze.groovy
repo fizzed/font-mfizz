@@ -37,9 +37,6 @@ import io.undertow.server.handlers.resource.PathResourceManager
 import java.nio.file.Paths
 import static io.undertow.Handlers.resource
 
-// required executables
-requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
-
 // configuration
 context = Contexts.currentContext()
 config = context.config()
@@ -67,6 +64,9 @@ def clean() {
 }
 
 def font_compile() {
+    // required executables
+requireExec("fontcustom", "Visit https://github.com/fizzed/font-mfizz/blob/master/DEVELOPMENT.md").run()
+
     clean()
 
     // verify fontcustom version
@@ -182,8 +182,8 @@ def release() {
         fail("Uncommitted changes in git. Commit them first then re-run this task")
     }
 
-    compile()
-    dist()
+    //compile()
+    //dist()
     
     // git commit & tag
     exec("git", "commit", "-am", "Preparing for release v" + version).run()
