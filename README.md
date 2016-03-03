@@ -20,6 +20,10 @@ Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
 [Download packages](https://github.com/fizzed/font-mfizz/releases)
 
+## Content delivery network
+
+[cdnjs](https://cdnjs.com) now hosts font-mfizz for use by all. Visit [https://cdnjs.com/libraries/font-mfizz](https://cdnjs.com/libraries/font-mfizz) for more info.
+
 ## Can I get an icon added?
 
 Do you want a new icon added?  Since this font is a hobby, the fastest way to get a new
@@ -43,6 +47,3 @@ becomes .icon-java in the css).
 6. Visit `http://localhost:8080/preview.html` in your browser
 
 7. Submit a pull request. Do NOT include any files from `dist`.
-
-
-
