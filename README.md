@@ -20,7 +20,7 @@ Updates tweeted [@fizzed_inc](http://twitter.com/fizzed_inc)
 
 [Download packages](https://github.com/fizzed/font-mfizz/releases)
 
-## Content delivery network
+## CDN
 
 [cdnjs](https://cdnjs.com) now hosts font-mfizz for use by all. Visit [https://cdnjs.com/libraries/font-mfizz](https://cdnjs.com/libraries/font-mfizz) for more info.
 
