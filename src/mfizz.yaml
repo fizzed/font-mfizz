@@ -154,6 +154,41 @@ icons:
     category: appos
     derived: https://commons.wikimedia.org/wiki/File:Fedora_logo.svg
 
+  - name: Alpine Linux
+    id: alpinelinux
+    version: 2.4.0
+    category: appos
+
+  - name: Git
+    id: git
+    version: 2.4.0
+    category: appos
+
+  - name: X11
+    id: x11
+    version: 2.4.0
+    category: appos
+
+  - name: Gulp
+    id: gulp
+    version: 2.4.0
+    category: appos
+
+  - name: Gulp (Alt)
+    id: gulp-alt
+    version: 2.4.0
+    category: appos
+
+  - name: Grunt
+    id: grunt
+    version: 2.4.0
+    category: appos
+
+  - name: Node Package Manager (NPM)
+    id: npm
+    version: 2.4.0
+    category: appos
+
   #
   # mobile
   #
@@ -350,6 +385,51 @@ icons:
     version: 1.2
     category: lang
 
+  - name: Go
+    id: go
+    version: 2.4.0
+    category: lang
+
+  - name: Go (Alt)
+    id: go-alt
+    version: 2.4.0
+    category: lang
+
+  - name: Rust
+    id: rust
+    version: 2.4.0
+    category: lang
+
+  - name: HTML5
+    id: html5
+    version: 2.4.0
+    category: lang
+
+  - name: HTML5 (Alt)
+    id: html5-alt
+    version: 2.4.0
+    category: lang
+
+  - name: CSS3
+    id: css3
+    version: 2.4.0
+    category: lang
+
+  - name: CSS3 (Alt)
+    id: css3-alt
+    version: 2.4.0
+    category: lang
+
+  - name: Elm
+    id: elm
+    version: 2.4.0
+    category: lang
+
+  - name: Sass
+    id: sass
+    version: 2.4.0
+    category: lang
+
   #
   # files
   #
@@ -501,6 +581,51 @@ icons:
     version: 2.0
     category: framework
 
+  - name: Unity Game Engine
+    id: unity
+    version: 2.4.0
+    category: framework
+
+  - name: D3
+    id: d3
+    version: 2.4.0
+    category: framework
+
+  - name: Angular
+    id: angular
+    version: 2.4.0
+    category: framework
+
+  - name: Angular (Alt)
+    id: angular-alt
+    version: 2.4.0
+    category: framework
+
+  - name: ReactJS
+    id: reactjs
+    version: 2.4.0
+    category: framework
+
+  - name: Spring Framework
+    id: spring
+    version: 2.4.0
+    category: framework
+
+  - name: JQuery
+    id: jquery
+    version: 2.4.0
+    category: framework
+
+  - name: BackboneJS
+    id: backbone
+    version: 2.4.0
+    category: framework
+
+  - name: Bootstrap
+    id: bootstrap
+    version: 2.4.0
+    category: framework
+
   #
   # brands
   #
@@ -546,6 +671,41 @@ icons:
   - name: WordPress
     id: wordpress
     version: 2.0
+    category: brand
+
+  - name: Microsoft Azure
+    id: azure
+    version: 2.4.0
+    category: brand
+
+  - name: Openshift
+    id: openshift
+    version: 2.4.0
+    category: brand
+
+  - name: Magento
+    id: magento
+    version: 2.4.0
+    category: brand
+
+  - name: Free Code Camp
+    id: freecodecamp
+    version: 2.4.0
+    category: brand
+
+  - name: Site Finity
+    id: sitefinity
+    version: 2.4.0
+    category: brand
+
+  - name: Code Igniter
+    id: codeigniter
+    version: 2.4.0
+    category: brand
+
+  - name: Code Pen
+    id: codepen
+    version: 2.4.0
     category: brand
 
   #

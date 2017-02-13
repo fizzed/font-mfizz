@@ -3,6 +3,41 @@ Font Mfizz by Fizzed
 
  - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
 
+#### 2.4.0 - 2017-02-13
+
+ - Added icon-go
+ - Added icon-go-alt
+ - Added icon-rust
+ - Added icon-alpinelinux
+ - Added icon-html5-alt
+ - Added icon-html5-alt2
+ - Added icon-azure
+ - Added icon-css3-alt
+ - Added icon-css3-alt2
+ - Added icon-elm
+ - Added icon-openshift
+ - Added icon-magento
+ - Added icon-git
+ - Added icon-x11
+ - Added icon-gulp
+ - Added icon-gulp-alt
+ - Added icon-grunt
+ - Added icon-npm
+ - Added icon-sass
+ - Added icon-unity
+ - Added icon-d3
+ - Added icon-angular
+ - Added icon-angular-alt
+ - Added icon-reactjs
+ - Added icon-spring
+ - Added icon-jquery
+ - Added icon-backbone
+ - Added icon-bootstrap
+ - Added icon-freecodecamp
+ - Added icon-sitefinity
+ - Added icon-codeigniter
+ - Added icon-codepen
+
 #### 2.3.0 - 2016-03-01
  
  - Vagrant now used to automate setup of precise dev environment
