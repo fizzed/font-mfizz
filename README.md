@@ -74,7 +74,7 @@ becomes .icon-java in the css).
 
 ## License
 
-This project is licensed under the MIT License and © 2013-2016 Fizzed, Inc. You can find a copy of
+This project is licensed under the MIT License and © 2013-2017 Fizzed, Inc. You can find a copy of
 all of the licenses in the projects LICENSE.txt file.
 
 All icons representing commercial companies are trademarks of their respective owners. The use of
