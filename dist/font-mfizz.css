@@ -1,5 +1,5 @@
 /*!
- * Font Mfizz 2.4.0
+ * Font Mfizz 2.4.1
  * Copyright 2013-2017 Fizzed, Inc.
  * MIT License
  *
@@ -151,7 +151,6 @@
 .icon-ruby-on-rails:before,
 .icon-ruby-on-rails-alt:before,
 .icon-rust:before,
-.icon-rust-alt2:before,
 .icon-sass:before,
 .icon-satellite:before,
 .icon-scala:before,
@@ -303,24 +302,23 @@
 .icon-ruby-on-rails:before { content: "\f172"; }
 .icon-ruby-on-rails-alt:before { content: "\f173"; }
 .icon-rust:before { content: "\f174"; }
-.icon-rust-alt2:before { content: "\f175"; }
-.icon-sass:before { content: "\f176"; }
-.icon-satellite:before { content: "\f177"; }
-.icon-scala:before { content: "\f178"; }
-.icon-scala-alt:before { content: "\f179"; }
-.icon-script:before { content: "\f17a"; }
-.icon-script-alt:before { content: "\f17b"; }
-.icon-shell:before { content: "\f17c"; }
-.icon-sitefinity:before { content: "\f17d"; }
-.icon-solaris:before { content: "\f17e"; }
-.icon-splatter:before { content: "\f17f"; }
-.icon-spring:before { content: "\f180"; }
-.icon-suse:before { content: "\f181"; }
-.icon-svg:before { content: "\f182"; }
-.icon-symfony:before { content: "\f183"; }
-.icon-tomcat:before { content: "\f184"; }
-.icon-ubuntu:before { content: "\f185"; }
-.icon-unity:before { content: "\f186"; }
-.icon-wireless:before { content: "\f187"; }
-.icon-wordpress:before { content: "\f188"; }
-.icon-x11:before { content: "\f189"; }
+.icon-sass:before { content: "\f175"; }
+.icon-satellite:before { content: "\f176"; }
+.icon-scala:before { content: "\f177"; }
+.icon-scala-alt:before { content: "\f178"; }
+.icon-script:before { content: "\f179"; }
+.icon-script-alt:before { content: "\f17a"; }
+.icon-shell:before { content: "\f17b"; }
+.icon-sitefinity:before { content: "\f17c"; }
+.icon-solaris:before { content: "\f17d"; }
+.icon-splatter:before { content: "\f17e"; }
+.icon-spring:before { content: "\f17f"; }
+.icon-suse:before { content: "\f180"; }
+.icon-svg:before { content: "\f181"; }
+.icon-symfony:before { content: "\f182"; }
+.icon-tomcat:before { content: "\f183"; }
+.icon-ubuntu:before { content: "\f184"; }
+.icon-unity:before { content: "\f185"; }
+.icon-wireless:before { content: "\f186"; }
+.icon-wordpress:before { content: "\f187"; }
+.icon-x11:before { content: "\f188"; }
