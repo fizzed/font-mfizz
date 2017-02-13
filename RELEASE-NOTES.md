@@ -3,6 +3,10 @@ Font Mfizz by Fizzed
 
  - [Fizzed, Inc.](http://fizzed.com) (Follow on Twitter: [@fizzed_inc](http://twitter.com/fizzed_inc))
 
+#### 2.4.1 - 2017-02-13
+
+ - Fix npm and rust spacing
+
 #### 2.4.0 - 2017-02-13
 
  - Added icon-go
