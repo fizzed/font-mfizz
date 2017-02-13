@@ -5,7 +5,7 @@ Font Mfizz by Fizzed
 
 #### 2.4.1 - 2017-02-13
 
- - Fix azure, heroku, npm and rust spacing
+ - Fix azure, heroku, npm, sass, and rust spacing
  - Fix gulp-alt outline
 
 #### 2.4.0 - 2017-02-13
