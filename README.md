@@ -32,6 +32,12 @@ Font Mfizz is proudly sponsored by <a href="https://www.greenback.com">Greenback
 
 [cdnjs](https://cdnjs.com) now hosts font-mfizz for use by all. Visit [https://cdnjs.com/libraries/font-mfizz](https://cdnjs.com/libraries/font-mfizz) for more info.
 
+## Community contributions
+
+### Ruby gem (by @gingerhot)
+https://rubygems.org/gems/font-mfizz-rails
+https://github.com/gingerhot/font-mfizz-rails
+
 ## Development
 
 Building font-mfizz relies on many system-level dependencies.  Rather than you
