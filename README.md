@@ -36,7 +36,6 @@ Font Mfizz is proudly sponsored by <a href="https://www.greenback.com">Greenback
 
 ### Ruby gem (by @gingerhot)
 https://rubygems.org/gems/font-mfizz-rails
-https://github.com/gingerhot/font-mfizz-rails
 
 ## Development
 
