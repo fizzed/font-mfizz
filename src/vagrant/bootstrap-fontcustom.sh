@@ -2,13 +2,13 @@ sudo apt-get update
 sudo apt-get -y install ruby ruby-dev fontforge ttfautohint unzip libz-dev software-properties-common python-software-properties
 
 # get latest build
-wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
-unzip -d woff woff-code-latest.zip
-cd woff
+wget https://github.com/Signorini/sfnt2woff/archive/master.zip
+unzip  master.zip
+cd sfnt2woff-master
 make
 sudo mv sfnt2woff /usr/local/bin/
 cd ..
-rm -Rf woff woff-code-latest.zip
+rm -Rf sfnt2woff-master/ master.zip
 
 # finally fontcustom (can we lock down specific ver?)
 echo "Install ruby gem fontcustom v1.3.8 (may take awhile)..."
