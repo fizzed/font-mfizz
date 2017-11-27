@@ -1,0 +1,12 @@
+<svg width="115" height="115" viewBox="0 0 115 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>VS-Code</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-11118 -330)">
+<g id="VS-Code">
+<use xlink:href="#path0_fill" transform="translate(11118 330)" fill="#007ACC"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 115 11.96L 115 103.04L 86.25 115L 0 85.9604L 86.25 98.7768L 86.25 0L 115 11.96ZM 7.1875 65.1475L 23.3676 49.1543L 7.1875 33.1508L 13.7425 30.9617L 29.6474 42.9381L 56.0625 16.827L 71.875 23.5483L 71.875 74.7356L 56.0625 81.457L 29.6454 55.3499L 13.7404 67.3263L 7.1875 65.1475ZM 37.8863 49.1543L 56.0625 62.827L 56.0625 35.459L 37.8863 49.1543Z"/>
+</defs>
+</svg>
