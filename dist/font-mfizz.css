@@ -1,6 +1,6 @@
 /*!
  * Font Mfizz 2.4.1
- * Copyright 2013-2017 Fizzed, Inc.
+ * Copyright 2013-2018 Fizzed, Inc.
  * MIT License
  *
  * Project: http://fizzed.com/oss/font-mfizz
@@ -143,6 +143,7 @@
 .icon-postgres:before,
 .icon-postgres-alt:before,
 .icon-python:before,
+.icon-r:before,
 .icon-raspberrypi:before,
 .icon-reactjs:before,
 .icon-redhat:before,
@@ -294,31 +295,32 @@
 .icon-postgres:before { content: "\f16a"; }
 .icon-postgres-alt:before { content: "\f16b"; }
 .icon-python:before { content: "\f16c"; }
-.icon-raspberrypi:before { content: "\f16d"; }
-.icon-reactjs:before { content: "\f16e"; }
-.icon-redhat:before { content: "\f16f"; }
-.icon-redis:before { content: "\f170"; }
-.icon-ruby:before { content: "\f171"; }
-.icon-ruby-on-rails:before { content: "\f172"; }
-.icon-ruby-on-rails-alt:before { content: "\f173"; }
-.icon-rust:before { content: "\f174"; }
-.icon-sass:before { content: "\f175"; }
-.icon-satellite:before { content: "\f176"; }
-.icon-scala:before { content: "\f177"; }
-.icon-scala-alt:before { content: "\f178"; }
-.icon-script:before { content: "\f179"; }
-.icon-script-alt:before { content: "\f17a"; }
-.icon-shell:before { content: "\f17b"; }
-.icon-sitefinity:before { content: "\f17c"; }
-.icon-solaris:before { content: "\f17d"; }
-.icon-splatter:before { content: "\f17e"; }
-.icon-spring:before { content: "\f17f"; }
-.icon-suse:before { content: "\f180"; }
-.icon-svg:before { content: "\f181"; }
-.icon-symfony:before { content: "\f182"; }
-.icon-tomcat:before { content: "\f183"; }
-.icon-ubuntu:before { content: "\f184"; }
-.icon-unity:before { content: "\f185"; }
-.icon-wireless:before { content: "\f186"; }
-.icon-wordpress:before { content: "\f187"; }
-.icon-x11:before { content: "\f188"; }
+.icon-r:before { content: "\f16d"; }
+.icon-raspberrypi:before { content: "\f16e"; }
+.icon-reactjs:before { content: "\f16f"; }
+.icon-redhat:before { content: "\f170"; }
+.icon-redis:before { content: "\f171"; }
+.icon-ruby:before { content: "\f172"; }
+.icon-ruby-on-rails:before { content: "\f173"; }
+.icon-ruby-on-rails-alt:before { content: "\f174"; }
+.icon-rust:before { content: "\f175"; }
+.icon-sass:before { content: "\f176"; }
+.icon-satellite:before { content: "\f177"; }
+.icon-scala:before { content: "\f178"; }
+.icon-scala-alt:before { content: "\f179"; }
+.icon-script:before { content: "\f17a"; }
+.icon-script-alt:before { content: "\f17b"; }
+.icon-shell:before { content: "\f17c"; }
+.icon-sitefinity:before { content: "\f17d"; }
+.icon-solaris:before { content: "\f17e"; }
+.icon-splatter:before { content: "\f17f"; }
+.icon-spring:before { content: "\f180"; }
+.icon-suse:before { content: "\f181"; }
+.icon-svg:before { content: "\f182"; }
+.icon-symfony:before { content: "\f183"; }
+.icon-tomcat:before { content: "\f184"; }
+.icon-ubuntu:before { content: "\f185"; }
+.icon-unity:before { content: "\f186"; }
+.icon-wireless:before { content: "\f187"; }
+.icon-wordpress:before { content: "\f188"; }
+.icon-x11:before { content: "\f189"; }
